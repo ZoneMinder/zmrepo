@@ -47,22 +47,22 @@ Instructions[1] = '<p><b>Installation instructions for ZoneMinder release rpms o
 Instructions[2] = '<p><b>Installation instructions for ZoneMinder development rpms on EL7 distributions (x86_64 architectures only)</b></p>' +
 						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/el/7/x86_64/<?php echo $zmrepo_el7_rpm; ?><br>' +
 						'sudo yum install --nogpgcheck <?php echo $zmrepo_el7_rpm; ?><br>' +
-						'sudo yum install zoneminder<br>' +
 						'sudo sed -i \'0,/enabled=0/{s\enabled=0\enabled=1\}\' /etc/yum.repos.d/zmrepo-centos-testing.repo' +
+						'sudo yum install zoneminder<br>' +
 						'less /usr/share/doc/zoneminder-*/README.Redhat7<br></font></p></div>'
 
 Instructions[3] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 26 (i386, x86_64, or armv7fl architectures)</b></p>' +
 						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/f/26/i386/<?php echo $zmrepo_f26_rpm; ?><br>' +
 						'sudo dnf install --nogpgcheck <?php echo $zmrepo_f26_rpm; ?><br>' +
-						'sudo dnf install zoneminder<br>' +
 						'sudo sed -i \'0,/enabled=0/{s\enabled=0\enabled=1\}\' /etc/yum.repos.d/zmrepo-fedora-testing.repo' +
+						'sudo dnf install zoneminder<br>' +
 						'less /usr/share/doc/zoneminder/README.Fedora<br></font></p></div>'
  
 Instructions[4] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 27 (i386, x86_64, or armv7fl architectures)</b></p>' +
 						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/f/27/i386/<?php echo $zmrepo_f27_rpm; ?><br>' +
 						'sudo dnf install --nogpgcheck <?php echo $zmrepo_f27_rpm; ?><br>' +
-						'sudo dnf install zoneminder<br>' +
 						'sudo sed -i \'0,/enabled=0/{s\enabled=0\enabled=1\}\' /etc/yum.repos.d/zmrepo-fedora-testing.repo' +
+						'sudo dnf install zoneminder<br>' +
 						'less /usr/share/doc/zoneminder/README.Fedora<br></font></p></div>'
  
 function SelectInstructions(select){
