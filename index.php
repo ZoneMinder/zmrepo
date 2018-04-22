@@ -48,18 +48,21 @@ Instructions[2] = '<p><b>Installation instructions for EL7 distributions (x86_64
 						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/el/7/x86_64/<?php echo $zmrepo_el7_rpm; ?><br>' +
 						'sudo yum install --nogpgcheck <?php echo $zmrepo_el7_rpm; ?><br>' +
 						'sudo yum install zoneminder<br>' +
+						'sudo sed -i \'0,/enabled=0/{s\enabled=0\enabled=1\}\' /etc/yum.repos.d/zmrepo-centos-testing.repo' +
 						'less /usr/share/doc/zoneminder-*/README.Redhat7<br></font></p></div>'
 
 Instructions[3] = '<p><b>Installation instructions for Fedora 26 (i386, x86_64, or armv7fl architectures)</b></p>' +
 						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/f/26/i386/<?php echo $zmrepo_f26_rpm; ?><br>' +
 						'sudo dnf install --nogpgcheck <?php echo $zmrepo_f26_rpm; ?><br>' +
 						'sudo dnf install zoneminder<br>' +
+						'sudo sed -i \'0,/enabled=0/{s\enabled=0\enabled=1\}\' /etc/yum.repos.d/zmrepo-fedora-testing.repo' +
 						'less /usr/share/doc/zoneminder/README.Fedora<br></font></p></div>'
  
 Instructions[4] = '<p><b>Installation instructions for Fedora 27 (i386, x86_64, or armv7fl architectures)</b></p>' +
 						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/f/27/i386/<?php echo $zmrepo_f27_rpm; ?><br>' +
 						'sudo dnf install --nogpgcheck <?php echo $zmrepo_f27_rpm; ?><br>' +
 						'sudo dnf install zoneminder<br>' +
+						'sudo sed -i \'0,/enabled=0/{s\enabled=0\enabled=1\}\' /etc/yum.repos.d/zmrepo-fedora-testing.repo' +
 						'less /usr/share/doc/zoneminder/README.Fedora<br></font></p></div>'
  
 function SelectInstructions(select){
@@ -261,9 +264,6 @@ Alternatively, you may continue to use the ZoneMinder 1.30.4 release and 1.31.1 
 	</tr>
 </table>
 <br>
-<p>Before starting, first verify you have a clean system.<br>
-Remove or disable any third party repositories you were previously using.</p>
-<br>
 <form autocomplete="off">
 Select your Distro to Display the Appropriate Installation Instructions: <select onChange='SelectInstructions(this);'>
 <option value="0">Choose your Distro</option>
@@ -277,6 +277,5 @@ Select your Distro to Display the Appropriate Installation Instructions: <select
 <div id="InstText"></div>
 
 <p>Once ZoneMinder has been installed, it is critically important that you read the README file under /usr/share/doc/zoneminder.  ZoneMinder will not run without completing the steps outlined in the README.</p>
-<p>Nightly builds are now available in the testing repo. To enable the testing repo, first install ZoneMinder using the normal instructions, then follow the instructions <a href="testing.html">shown here</a>.</p>
 </body>
 </html>
