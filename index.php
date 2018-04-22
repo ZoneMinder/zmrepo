@@ -85,7 +85,6 @@ Alternatively, you may continue to use the ZoneMinder 1.30.4 release and 1.31.1 
 <br>
 <p>The following distributions are supported:</p>
 <p>
-<a href="el/6">EL6</a> (CentOS/RHEL/SL)<br>
 <a href="el/7">EL7</a> (CentOS/RHEL/SL)<br>
 <a href="f/26">F26</a> (Fedora 26)<br>
 <a href="f/27">F27</a> (Fedora 27)<br>
@@ -188,7 +187,7 @@ Alternatively, you may continue to use the ZoneMinder 1.30.4 release and 1.31.1 
 			CentOS/RHEL/SL
 		</td>
 		<td rowspan="2" style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			6
+			6 (EOL)
 		</td>
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
 			release
