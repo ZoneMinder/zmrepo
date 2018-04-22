@@ -75,15 +75,13 @@ function SelectInstructions(select){
 A <a href="http://www.zoneminder.com/">ZoneMinder</a> RPM Repository</b></font></p>
 <br>
 <br>
-<p>
-<b>ZONEMINDER RELEASES HAVE MOVED (EXCEPT EL6)</b><br>
-This notice is for official releases only. Zmrepo will continue to host nightly builds for all supported distros. 
-ZoneMinder releases for EL7 and Fedora have moved to <a href="https://rpmfusion.org/">RPM Fusion</a>. This was done to provide a better experience for the end user. 
-ZoneMinder releases for EL6 will continue to be hosted here at zmrepo until EOL.
-For more details, please see the <a href="http://zoneminder.readthedocs.io/en/latest/installationguide/redhat.html"> Redhat ZoneMinder documentation</a>.
-</p>
-<p>
-This repository provides a turn-key solution for the installation of ZoneMinder on RedHat based Linux distributions.  Any dependencies not found within the particular Linux distribution's base repository will be included in this repository.</p>
+<b>ZONEMINDER RELEASES HAVE MOVED</b><br>
+This site hosts ZoneMinder unstable, development rpm packages. If you are looking for stable releases of ZoneMinder, you may find them at <a href="https://rpmfusion.org/">RPM Fusion</a>.
+
+<b>SUPPORT FOR ZONEMINDER ON EL6 HAS REACHED END OF LIFE</b><br>
+New ZoneMinder pacakges will no longer be built for the EL6 distro, which includes rhel6, centos 6, scientific linux 6, and other clones. We recommend you upgrade to EL7 or Fedora to remain up to date with the latest ZoneMinder release.
+Alternatively, you may continue to use the ZoneMinder 1.30.4 release and 1.31.1 development packages hosted on this site. These packages will remain hosted here indefinitely.
+
 <br>
 <p>The following distributions are supported:</p>
 <p>
