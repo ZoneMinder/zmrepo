@@ -80,11 +80,11 @@ A <a href="http://www.zoneminder.com/">ZoneMinder</a> RPM Repository</b></font><
 <br>
 <b>ZONEMINDER RELEASES HAVE MOVED</b><br>
 This site hosts ZoneMinder unstable, development rpm packages. If you are looking for stable releases of ZoneMinder, you may find them at <a href="https://rpmfusion.org/">RPM Fusion</a>.
-
+<p>
 <b>SUPPORT FOR ZONEMINDER ON EL6 HAS REACHED END OF LIFE</b><br>
-New ZoneMinder pacakges will no longer be built for the EL6 distro, which includes rhel6, centos 6, scientific linux 6, and other clones. We recommend you upgrade to EL7 or Fedora to remain up to date with the latest ZoneMinder release.
+New ZoneMinder packages will no longer be built for the EL6 distro, which includes rhel 6, centos 6, scientific linux 6, and other clones. We recommend you upgrade to EL7 or Fedora to remain up to date with the latest ZoneMinder release.
 Alternatively, you may continue to use the ZoneMinder 1.30.4 release and 1.31.1 development packages hosted on this site. These packages will remain hosted here indefinitely.
-
+</p>
 <br>
 <p>The following distributions are supported:</p>
 <p>
