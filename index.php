@@ -20,18 +20,18 @@
 
 $zmrepo_el6_rpms = glob("el/6/i386/zmrepo-6-*.noarch.rpm");
 $zmrepo_el7_rpms = glob("el/7/x86_64/zmrepo-7-*.noarch.rpm");
-$zmrepo_f26_rpms = glob("f/26/i386/zmrepo-26-*.noarch.rpm");
-$zmrepo_f27_rpms = glob("f/27/i386/zmrepo-27-*.noarch.rpm");
+$zmrepo_f27_rpms = glob("f/28/i386/zmrepo-27-*.noarch.rpm");
+$zmrepo_f28_rpms = glob("f/28/i386/zmrepo-28-*.noarch.rpm");
 
 natsort($zmrepo_el6_rpms);
 natsort($zmrepo_el7_rpms);
-natsort($zmrepo_f26_rpms);
 natsort($zmrepo_f27_rpms);
+natsort($zmrepo_f28_rpms);
 
 $zmrepo_el6_rpm = basename(end($zmrepo_el6_rpms));
 $zmrepo_el7_rpm = basename(end($zmrepo_el7_rpms));
-$zmrepo_f26_rpm = basename(end($zmrepo_f26_rpms));
 $zmrepo_f27_rpm = basename(end($zmrepo_f27_rpms));
+$zmrepo_f28_rpm = basename(end($zmrepo_f28_rpms));
 
 ?>
 
@@ -51,16 +51,16 @@ Instructions[2] = '<p><b>Installation instructions for ZoneMinder development rp
 						'sudo yum install zoneminder<br>' +
 						'less /usr/share/doc/zoneminder-*/README.Redhat7<br></font></p></div>'
 
-Instructions[3] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 26 (i386, x86_64, or armv7fl architectures)</b></p>' +
-						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/f/26/i386/<?php echo $zmrepo_f26_rpm; ?><br>' +
-						'sudo dnf install --nogpgcheck <?php echo $zmrepo_f26_rpm; ?><br>' +
+Instructions[3] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 27 (i386, x86_64, or armv7fl architectures)</b></p>' +
+						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/f/28/i386/<?php echo $zmrepo_f27_rpm; ?><br>' +
+						'sudo dnf install --nogpgcheck <?php echo $zmrepo_f27_rpm; ?><br>' +
 						'sudo sed -i \'0,/enabled=0/{s/enabled=0/enabled=1/}\' /etc/yum.repos.d/zmrepo-fedora-testing.repo<br>' +
 						'sudo dnf install zoneminder<br>' +
 						'less /usr/share/doc/zoneminder/README.Fedora<br></font></p></div>'
  
-Instructions[4] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 27 (i386, x86_64, or armv7fl architectures)</b></p>' +
-						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/f/27/i386/<?php echo $zmrepo_f27_rpm; ?><br>' +
-						'sudo dnf install --nogpgcheck <?php echo $zmrepo_f27_rpm; ?><br>' +
+Instructions[4] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 28 (i386, x86_64, or armv7fl architectures)</b></p>' +
+						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/f/28/i386/<?php echo $zmrepo_f28_rpm; ?><br>' +
+						'sudo dnf install --nogpgcheck <?php echo $zmrepo_f28_rpm; ?><br>' +
 						'sudo sed -i \'0,/enabled=0/{s/enabled=0/enabled=1/}\' /etc/yum.repos.d/zmrepo-fedora-testing.repo<br>' +
 						'sudo dnf install zoneminder<br>' +
 						'less /usr/share/doc/zoneminder/README.Fedora<br></font></p></div>'
@@ -89,8 +89,8 @@ Alternatively, you may continue to use the ZoneMinder 1.30.4 release and 1.31.1 
 <p>The following distributions are supported:</p>
 <p>
 <a href="el/7">EL7</a> (CentOS/RHEL/SL)<br>
-<a href="f/26">F26</a> (Fedora 26)<br>
-<a href="f/27">F27</a> (Fedora 27)<br>
+<a href="f/28">F27</a> (Fedora 27)<br>
+<a href="f/28">F28</a> (Fedora 28)<br>
 </p>
 <p align="center" style="font-weight: bold">SUPPORT MATRIX</p>
 <table align="center" cellspacing="0">
@@ -112,43 +112,6 @@ Alternatively, you may continue to use the ZoneMinder 1.30.4 release and 1.31.1 
 		<td rowspan="4" style="font-weight: bold; border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
 			Fedora
 		</td>
-		<td rowspan="2" style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			26
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			release
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			<a href="f/26/SRPMS">source</a>
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			<a href="f/26/i386">i386</a>
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			<a href="f/26/x86_64">x86_64</a>
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
-			<a href="f/26/armhfp">armhfp</a>
-		</td>
-	</tr>
-	<tr align="center" valign="center">
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			testing
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			<a href="f/testing/26/SRPMS">source</a>
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			<a href="f/testing/26/i386">i386</a>
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			<a href="f/testing/26/x86_64">x86_64</a>
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
-			<a href="f/testing/26/armhfp">armhfp</a>
-		</td>
-	</tr>
-	<tr align="center" valign="center">
 		<td rowspan="2" style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
 			27
 		</td>
@@ -183,6 +146,43 @@ Alternatively, you may continue to use the ZoneMinder 1.30.4 release and 1.31.1 
 		</td>
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
 			<a href="f/testing/27/armhfp">armhfp</a>
+		</td>
+	</tr>
+	<tr align="center" valign="center">
+		<td rowspan="2" style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+			28
+		</td>
+		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+			release
+		</td>
+		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+			<a href="f/28/SRPMS">source</a>
+		</td>
+		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+			<a href="f/28/i386">i386</a>
+		</td>
+		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+			<a href="f/28/x86_64">x86_64</a>
+		</td>
+		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
+			<a href="f/28/armhfp">armhfp</a>
+		</td>
+	</tr>
+	<tr align="center" valign="center">
+		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+			testing
+		</td>
+		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+			<a href="f/testing/28/SRPMS">source</a>
+		</td>
+		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+			<a href="f/testing/28/i386">i386</a>
+		</td>
+		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+			<a href="f/testing/28/x86_64">x86_64</a>
+		</td>
+		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
+			<a href="f/testing/28/armhfp">armhfp</a>
 		</td>
 	</tr>
 	<tr align="center" valign="center">
@@ -269,8 +269,8 @@ Select your Distro to Display the Appropriate Installation Instructions: <select
 <option value="0">Choose your Distro</option>
 <option value="1">EL6 CentOS/RHEL/SL 6</option>
 <option value="2">EL7 CentOS/RHEL/SL 7</option>
-<option value="3">F26 Fedora 26</option>
-<option value="4">F27 Fedora 27</option>
+<option value="3">F27 Fedora 27</option>
+<option value="4">F28 Fedora 28</option>
 </select>
 </form>
 <br>
