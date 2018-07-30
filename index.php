@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="shortcut icon" href="images/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
 <title>ZMREPO - A ZoneMinder RPM Repository</title>
 <meta name="generator" content="Bluefish 2.2.6" >
 <meta name="author" content="Andy Bauer" >
