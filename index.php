@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="shortcut icon" href="http://www.zoneminder.com/sites/zoneminder.com/files/favicon.ico" type="image/vnd.microsoft.icon" />
+<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
 <title>ZMREPO - A ZoneMinder RPM Repository</title>
 <meta name="generator" content="Bluefish 2.2.6" >
 <meta name="author" content="Andy Bauer" >
@@ -70,12 +70,25 @@ function SelectInstructions(select){
 	document.getElementById('InstText').innerHTML = Instructions[selected];
 }
 </script>
-
+<style>
+  table {
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  td,th {
+    border: 1px solid black; 
+    padding: 0.04in;
+    text-align: left;
+  }
+</style>
 </head>
-<body bgcolor="#c9c9c9">
-<p><img src="ZoneMinderSmall.gif" style="float: left; padding-right: 50px;" alt="">
-<font size="5" style="font-size: 18pt" color="#336699"><b>Welcome to ZMREPO<br>
-A <a href="http://www.zoneminder.com/">ZoneMinder</a> RPM Repository</b></font></p>
+<body bgcolor="#c9c9c9" style="padding-left: 200px;">
+  <p><img src="ZoneMinderSmall.gif" style="float: left; margin-left:-200px;" alt="">
+  <font size="5" style="font-size: 18pt" color="#336699"><b>Welcome to ZMREPO<br>
+  A <a href="http://www.zoneminder.com/">ZoneMinder</a> Repository for RPM and DEB packages</b></font></p>
+<div id="RPM">
+<fieldset><legend>RPM</legend>
 <br>
 <br>
 <b>ZONEMINDER RELEASES HAVE MOVED</b><br>
@@ -277,5 +290,49 @@ Select your Distro to Display the Appropriate Installation Instructions: <select
 <div id="InstText"></div>
 
 <p>Once ZoneMinder has been installed, it is critically important that you read the README file under /usr/share/doc/zoneminder.  ZoneMinder will not run without completing the steps outlined in the README.</p>
+</fieldset>
+</div><!--END RPM-->
+<div id="DEB">
+  <fieldset><legend>Debian/Ubuntu Packages</legend>
+  Please add deb https://zmrepo.zoneminder.com/debian/branch distribution/ to /etc/apt/sources.list or a file under /etc/apt/sources.list.d maybe named zoneminder.list. For example an entry for master snapshot builds on ubuntu would be:<br/><br/>
+  deb https://zmrepo.zoneminder.com/debian/master xenial/<br/><br/>
+<br/>
+The following is a list of available branches:<br/><br/>
+<table>
+  <tr><th>Branch Name</th><th>Description</th></tr>
+  <tr>
+    <td>master</td> 
+    <td>Snapshots of current master branch from 
+      <a href="https://github.com/ZoneMinder/zoneminder">
+      https://github.com/ZoneMinder/zoneminder
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>release</td> 
+    <td>Stable releases of ZoneMinder
+      <a href="https://github.com/ZoneMinder/zoneminder">
+      https://github.com/ZoneMinder/zoneminder
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td>storageareas</td>
+    <td>Isaac's experimental development branch from 
+<a href="https://github.com/ConnorTechnology/zoneminder">https://github.com/ConnorTechnology/zoneminder</a>
+    </td>
+  </tr>
+</table>
+<br/>
+Then we want to import the GPG signature public key. Do:<br/>
+<br/>
+wget -O - https://zmrepo.zoneminder.com/debian/archive-keyring.gpg | sudo apt-key add -<br/>
+<br/>
+Then do:<br/>
+<br/>
+sudo apt-get update<br/>
+sudo apt-get install zoneminder<br/>
+  </fieldset> 
+</div>
 </body>
 </html>
