@@ -49,21 +49,21 @@ Instructions[2] = '<p><b>Installation instructions for ZoneMinder development rp
 						'sudo yum install --nogpgcheck <?php echo $zmrepo_el7_rpm; ?><br>' +
 						'sudo sed -i \'0,/enabled=0/{s/enabled=0/enabled=1/\}\' /etc/yum.repos.d/zmrepo-centos-testing.repo<br>' +
 						'sudo yum install zoneminder<br>' +
-						'less /usr/share/doc/zoneminder-*/README.Redhat7<br></font></p></div>'
+						'less /usr/share/doc/zoneminder-*/README<br></font></p></div>'
 
 Instructions[3] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 27 (i386, x86_64, or armv7fl architectures)</b></p>' +
 						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/f/28/i386/<?php echo $zmrepo_f27_rpm; ?><br>' +
 						'sudo dnf install --nogpgcheck <?php echo $zmrepo_f27_rpm; ?><br>' +
 						'sudo sed -i \'0,/enabled=0/{s/enabled=0/enabled=1/}\' /etc/yum.repos.d/zmrepo-fedora-testing.repo<br>' +
 						'sudo dnf install zoneminder<br>' +
-						'less /usr/share/doc/zoneminder/README.Fedora<br></font></p></div>'
+						'less /usr/share/doc/zoneminder/README<br></font></p></div>'
  
 Instructions[4] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 28 (i386, x86_64, or armv7fl architectures)</b></p>' +
 						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/f/28/i386/<?php echo $zmrepo_f28_rpm; ?><br>' +
 						'sudo dnf install --nogpgcheck <?php echo $zmrepo_f28_rpm; ?><br>' +
 						'sudo sed -i \'0,/enabled=0/{s/enabled=0/enabled=1/}\' /etc/yum.repos.d/zmrepo-fedora-testing.repo<br>' +
 						'sudo dnf install zoneminder<br>' +
-						'less /usr/share/doc/zoneminder/README.Fedora<br></font></p></div>'
+						'less /usr/share/doc/zoneminder/README<br></font></p></div>'
  
 function SelectInstructions(select){
 	selected = select.selectedIndex;
