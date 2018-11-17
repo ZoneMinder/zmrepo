@@ -225,13 +225,13 @@ Alternatively, you may continue to use the ZoneMinder 1.30.4 release and 1.31.1 
 			testing
 		</td>
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			<a href="el/testing/6/SRPMS">source</a>
+			n/a
 		</td>
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			<a href="el/testing/6/i386">i386</a>
+			n/a
 		</td>
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			<a href="el/testing/6/x86_64">x86_64</a>
+			n/a
 		</td>
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
 			n/a
