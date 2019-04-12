@@ -293,15 +293,28 @@ Select your Distro to Display the Appropriate Installation Instructions: <select
 </div><!--END RPM-->
 <div id="DEB">
   <fieldset><legend>Debian/Ubuntu Packages</legend>
-  Please add deb https://zmrepo.zoneminder.com/debian/branch distribution/ to /etc/apt/sources.list or a file under /etc/apt/sources.list.d maybe named zoneminder.list. For example an entry for master snapshot builds on ubuntu would be:<br/><br/>
-  deb https://zmrepo.zoneminder.com/debian/master xenial/<br/><br/>
-<br/>
-The following is a list of available branches:<br/><br/>
+  <b>Installation guide for stable version</b><br>
+  If you are a normal user looking to install a stable version of ZoneMinder, you should follow our comprehensive installation guides available in the online documentation for <a href="https://zoneminder.readthedocs.io/en/latest/installationguide/debian.html">Debian</a> and for <a href="https://zoneminder.readthedocs.io/en/latest/installationguide/ubuntu.html">Ubuntu</a>.
+
+  <br><br>
+
+  <b>Additional information for advanced users and developers</b><br>
+  Packages are also available for development versions. Be aware that these packages are created and uploaded manually from time to time. There is no automated nightly build yet.
+  If you are looking for the latest master, best is to clone the git repository and build from source. 
+  <br> 
+  To download and install (and later update) these packages with apt, please add deb https://zmrepo.zoneminder.com/debian/branch distribution/ 
+  to /etc/apt/sources.list or a file under /etc/apt/sources.list.d maybe named zoneminder.list.
+  <br>
+  For example an entry for master snapshot builds on ubuntu would be:
+  <br>
+  deb https://zmrepo.zoneminder.com/debian/master xenial/
+<br><br><br>
+The following is a list of available branches:<br><br>
 <table>
   <tr><th>Branch Name</th><th>Description</th></tr>
   <tr>
     <td>master</td> 
-    <td>Snapshots of current master branch from 
+    <td>Snapshots of master branch from 
       <a href="https://github.com/ZoneMinder/zoneminder">
       https://github.com/ZoneMinder/zoneminder
       </a>
