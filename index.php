@@ -41,7 +41,6 @@ Instructions[0] = ' '
 Instructions[1] = '<p><b>Installation instructions for ZoneMinder development rpms on EL7 distributions (x86_64 architectures only)</b></p>' +
 						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/el/7/x86_64/<?php echo $zmrepo_el7_rpm; ?><br>' +
 						'sudo yum install --nogpgcheck <?php echo $zmrepo_el7_rpm; ?><br>' +
-						'sudo sed -i \'0,/enabled=0/{s/enabled=0/enabled=1/\}\' /etc/yum.repos.d/zmrepo-centos-testing.repo<br>' +
 						'sudo yum install zoneminder<br>' +
 						'less /usr/share/doc/zoneminder-*/README<br></font></p></div>'
 
@@ -151,10 +150,10 @@ This site hosts ZoneMinder unstable, development rpm packages. If you are lookin
 			7
 		</td>
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			<a href="el/testing/7/SRPMS">source</a>
+			<a href="el/7/SRPMS">source</a>
 		</td>
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			<a href="el/testing/7/x86_64">x86_64</a>
+			<a href="el/7/x86_64">x86_64</a>
 		</td>
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
 			n/a
