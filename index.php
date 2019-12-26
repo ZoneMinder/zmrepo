@@ -20,8 +20,8 @@
 
 $zmrepo_el7_rpms = glob("el/7/x86_64/zmrepo-7-*.noarch.rpm");
 $zmrepo_el8_rpms = glob("el/8/x86_64/zmrepo-8-*.noarch.rpm");
-$zmrepo_f29_rpms = glob("f/29/x86_64/zmrepo-29-*.noarch.rpm");
-$zmrepo_f30_rpms = glob("f/30/x86_64/zmrepo-30-*.noarch.rpm");
+$zmrepo_f29_rpms = glob("fc/29/x86_64/zmrepo-29-*.noarch.rpm");
+$zmrepo_f30_rpms = glob("fc/30/x86_64/zmrepo-30-*.noarch.rpm");
 
 natsort($zmrepo_el7_rpms);
 natsort($zmrepo_el8_rpms);
@@ -96,8 +96,8 @@ This site hosts ZoneMinder unstable, development rpm packages. If you are lookin
 <p>
 <a href="el/7">EL7</a> (CentOS/RHEL/SL)<br>
 <a href="el/8">EL8</a> (CentOS/RHEL/SL)<br>
-<a href="f/29">F29</a> (Fedora 29)<br>
-<a href="f/29">F30</a> (Fedora 30)<br>
+<a href="fc/29">F29</a> (Fedora 29)<br>
+<a href="fc/29">F30</a> (Fedora 30)<br>
 </p>
 <p align="center" style="font-weight: bold">SUPPORT MATRIX</p>
 <table align="center" cellspacing="0">
@@ -120,13 +120,13 @@ This site hosts ZoneMinder unstable, development rpm packages. If you are lookin
 			29
 		</td>
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			<a href="f/29/SRPMS">source</a>
+			<a href="fc/29/SRPMS">source</a>
 		</td>
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			<a href="f/29/x86_64">x86_64</a>
+			<a href="fc/29/x86_64">x86_64</a>
 		</td>
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
-			<a href="f/29/armhfp">armhfp</a>
+			<a href="fc/29/armhfp">armhfp</a>
 		</td>
 	</tr>
 	<tr align="center" valign="center">
@@ -134,13 +134,13 @@ This site hosts ZoneMinder unstable, development rpm packages. If you are lookin
 			30
 		</td>
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			<a href="f/30/SRPMS">source</a>
+			<a href="fc/30/SRPMS">source</a>
 		</td>
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			<a href="f/30/x86_64">x86_64</a>
+			<a href="fc/30/x86_64">x86_64</a>
 		</td>
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
-			<a href="f/30/armhfp">armhfp</a>
+			<a href="fc/30/armhfp">armhfp</a>
 		</td>
 	</tr>
 	<tr align="center" valign="center">
