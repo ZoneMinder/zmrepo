@@ -46,8 +46,8 @@ Instructions[1] = '<p><b>Installation instructions for ZoneMinder development rp
 
 Instructions[2] = '<p><b>Installation instructions for ZoneMinder development rpms on EL8 distributions (x86_64 architectures only)</b></p>' +
 						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/el/8/x86_64/<?php echo $zmrepo_el8_rpm; ?><br>' +
-						'sudo yum install --nogpgcheck <?php echo $zmrepo_el8_rpm; ?><br>' +
-						'sudo yum install zoneminder<br>' +
+						'sudo dnf install --nogpgcheck <?php echo $zmrepo_el8_rpm; ?><br>' +
+						'sudo dnf install zoneminder<br>' +
 						'less /usr/share/doc/zoneminder-*/README<br></font></p></div>'
 
 Instructions[3] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 29 (x86_64, or armv7fl architectures)</b></p>' +
