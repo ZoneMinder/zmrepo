@@ -20,18 +20,18 @@
 
 $zmrepo_el7_rpms = glob("el/7/x86_64/zmrepo-7-*.noarch.rpm");
 $zmrepo_el8_rpms = glob("el/8/x86_64/zmrepo-8-*.noarch.rpm");
-$zmrepo_f29_rpms = glob("fc/29/x86_64/zmrepo-29-*.noarch.rpm");
 $zmrepo_f30_rpms = glob("fc/30/x86_64/zmrepo-30-*.noarch.rpm");
+$zmrepo_f31_rpms = glob("fc/31/x86_64/zmrepo-31-*.noarch.rpm");
 
 natsort($zmrepo_el7_rpms);
 natsort($zmrepo_el8_rpms);
-natsort($zmrepo_f29_rpms);
 natsort($zmrepo_f30_rpms);
+natsort($zmrepo_f31_rpms);
 
 $zmrepo_el7_rpm = basename(end($zmrepo_el7_rpms));
 $zmrepo_el8_rpm = basename(end($zmrepo_el8_rpms));
-$zmrepo_f29_rpm = basename(end($zmrepo_f29_rpms));
 $zmrepo_f30_rpm = basename(end($zmrepo_f30_rpms));
+$zmrepo_f31_rpm = basename(end($zmrepo_f31_rpms));
 
 ?>
 
@@ -50,15 +50,15 @@ Instructions[2] = '<p><b>Installation instructions for ZoneMinder development rp
 						'sudo dnf install zoneminder<br>' +
 						'less /usr/share/doc/zoneminder-*/README<br></font></p></div>'
 
-Instructions[3] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 29 (x86_64, or armv7fl architectures)</b></p>' +
-						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/f/29/x86_64/<?php echo $zmrepo_f29_rpm; ?><br>' +
-						'sudo dnf install --nogpgcheck <?php echo $zmrepo_f29_rpm; ?><br>' +
+Instructions[3] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 30 (x86_64, or armv7fl architectures)</b></p>' +
+						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/f/30/x86_64/<?php echo $zmrepo_f30_rpm; ?><br>' +
+						'sudo dnf install --nogpgcheck <?php echo $zmrepo_f30_rpm; ?><br>' +
 						'sudo dnf install zoneminder<br>' +
 						'less /usr/share/doc/zoneminder-common/README<br></font></p></div>'
  
-Instructions[4] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 30 (x86_64, or armv7fl architectures)</b></p>' +
-						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/f/30/x86_64/<?php echo $zmrepo_f30_rpm; ?><br>' +
-						'sudo dnf install --nogpgcheck <?php echo $zmrepo_f30_rpm; ?><br>' +
+Instructions[4] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 31 (x86_64, or armv7fl architectures)</b></p>' +
+						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/f/31/x86_64/<?php echo $zmrepo_f31_rpm; ?><br>' +
+						'sudo dnf install --nogpgcheck <?php echo $zmrepo_f31_rpm; ?><br>' +
 						'sudo dnf install zoneminder<br>' +
 						'less /usr/share/doc/zoneminder-common/README<br></font></p></div>'
  
@@ -95,8 +95,8 @@ This site hosts ZoneMinder unstable, development rpm packages. If you are lookin
 <p>
 <a href="el/7">EL7</a> (CentOS/RHEL/SL)<br>
 <a href="el/8">EL8</a> (CentOS/RHEL/SL)<br>
-<a href="fc/29">F29</a> (Fedora 29)<br>
-<a href="fc/29">F30</a> (Fedora 30)<br>
+<a href="fc/30">F30</a> (Fedora 30)<br>
+<a href="fc/31">F31</a> (Fedora 31)<br>
 </p>
 <p align="center" style="font-weight: bold">SUPPORT MATRIX</p>
 <table align="center" cellspacing="0">
@@ -116,20 +116,6 @@ This site hosts ZoneMinder unstable, development rpm packages. If you are lookin
 			Fedora
 		</td>
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			29
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			<a href="fc/29/SRPMS">source</a>
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			<a href="fc/29/x86_64">x86_64</a>
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
-			<a href="fc/29/armhfp">armhfp</a>
-		</td>
-	</tr>
-	<tr align="center" valign="center">
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
 			30
 		</td>
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
@@ -140,6 +126,20 @@ This site hosts ZoneMinder unstable, development rpm packages. If you are lookin
 		</td>
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
 			<a href="fc/30/armhfp">armhfp</a>
+		</td>
+	</tr>
+	<tr align="center" valign="center">
+		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+			31
+		</td>
+		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+			<a href="fc/31/SRPMS">source</a>
+		</td>
+		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+			<a href="fc/31/x86_64">x86_64</a>
+		</td>
+		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
+			<a href="fc/31/armhfp">armhfp</a>
 		</td>
 	</tr>
 	<tr align="center" valign="center">
@@ -180,8 +180,8 @@ Select your Distro to Display the Appropriate Installation Instructions: <select
 <option value="0">Choose your Distro</option>
 <option value="1">EL7 CentOS/RHEL/SL 7</option>
 <option value="2">EL8 CentOS/RHEL/SL 8</option>
-<option value="3">F28 Fedora 29</option>
-<option value="4">F29 Fedora 30</option>
+<option value="3">F30 Fedora 30</option>
+<option value="4">F31 Fedora 31</option>
 </select>
 </form>
 <br>
