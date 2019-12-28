@@ -51,13 +51,13 @@ Instructions[2] = '<p><b>Installation instructions for ZoneMinder development rp
 						'less /usr/share/doc/zoneminder-*/README<br></font></p></div>'
 
 Instructions[3] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 30 (x86_64, or armv7fl architectures)</b></p>' +
-						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/f/30/x86_64/<?php echo $zmrepo_f30_rpm; ?><br>' +
+						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/fc/30/x86_64/<?php echo $zmrepo_f30_rpm; ?><br>' +
 						'sudo dnf install --nogpgcheck <?php echo $zmrepo_f30_rpm; ?><br>' +
 						'sudo dnf install zoneminder<br>' +
 						'less /usr/share/doc/zoneminder-common/README<br></font></p></div>'
  
 Instructions[4] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 31 (x86_64, or armv7fl architectures)</b></p>' +
-						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/f/31/x86_64/<?php echo $zmrepo_f31_rpm; ?><br>' +
+						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/fc/31/x86_64/<?php echo $zmrepo_f31_rpm; ?><br>' +
 						'sudo dnf install --nogpgcheck <?php echo $zmrepo_f31_rpm; ?><br>' +
 						'sudo dnf install zoneminder<br>' +
 						'less /usr/share/doc/zoneminder-common/README<br></font></p></div>'
