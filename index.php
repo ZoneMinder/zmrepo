@@ -2,7 +2,7 @@
 <html>
 <head>
 <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
-<title>ZMREPO - A ZoneMinder RPM Repository</title>
+<title>ZMREPO - A ZoneMinder Repository for RPM and DEB packages</title>
 <meta name="generator" content="Bluefish 2.2.6" >
 <meta name="author" content="Andy Bauer" >
 <meta name="date" content="2015-05-24T22:48:18-0500" >
