@@ -107,7 +107,7 @@ This site hosts ZoneMinder unstable, development rpm packages. If you are lookin
 		<td style="border-top: 1px solid black; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
 			Version
 		</td>
-		<td colspan="3" style="border: 1px solid black; padding: 0.04in">
+		<td colspan="4" style="border: 1px solid black; padding: 0.04in">
 			Arch
 		</td>
 	</tr>
@@ -127,6 +127,9 @@ This site hosts ZoneMinder unstable, development rpm packages. If you are lookin
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
 			<a href="fc/30/armhfp">armhfp</a>
 		</td>
+		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
+			<a href="fc/30/aarch64">aarch64</a>
+		</td>
 	</tr>
 	<tr align="center" valign="center">
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
@@ -140,6 +143,9 @@ This site hosts ZoneMinder unstable, development rpm packages. If you are lookin
 		</td>
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
 			<a href="fc/31/armhfp">armhfp</a>
+		</td>
+		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
+			<a href="fc/31/aarch64">aarch64</a>
 		</td>
 	</tr>
 	<tr align="center" valign="center">
@@ -158,6 +164,9 @@ This site hosts ZoneMinder unstable, development rpm packages. If you are lookin
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
 			n/a
 		</td>
+		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
+			n/a
+		</td>
 	</tr>
 	<tr align="center" valign="center">
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
@@ -171,6 +180,9 @@ This site hosts ZoneMinder unstable, development rpm packages. If you are lookin
 		</td>
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
 			n/a
+		</td>
+		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
+			<a href="el/8/aarch64">aarch64</a>
 		</td>
 	</tr>
 </table>
