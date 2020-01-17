@@ -220,17 +220,11 @@ The following is a list of available branches:<br><br>
     </td>
   </tr>
   <tr>
-    <td>release</td> 
-    <td>Stable releases of ZoneMinder
+    <td>release-1.34</td>
+    <td>Stable releases of ZoneMinder 1.34.x
       <a href="https://github.com/ZoneMinder/zoneminder">
       https://github.com/ZoneMinder/zoneminder
       </a>
-    </td>
-  </tr>
-  <tr>
-    <td>storageareas</td>
-    <td>Isaac's experimental development branch from 
-<a href="https://github.com/ConnorTechnology/zoneminder">https://github.com/ConnorTechnology/zoneminder</a>
     </td>
   </tr>
 </table>
