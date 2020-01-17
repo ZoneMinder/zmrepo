@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html>
-<head>
-<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
-<title>ZMREPO - A ZoneMinder RPM Repository</title>
-<meta name="generator" content="Bluefish 2.2.6" >
-<meta name="author" content="Andy Bauer" >
-<meta name="date" content="2015-05-24T22:48:18-0500" >
-<meta name="copyright" content="">
-<meta name="keywords" content="">
-<meta name="description" content="">
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8">
-<meta http-equiv="content-style-type" content="text/css">
-<meta http-equiv="expires" content="0">
-
-<script type="text/javascript">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>ZMREPO - A ZoneMinder RPM Repository</title>
+    <meta name="generator" content="Bluefish 2.2.6" >
+    <meta name="author" content="Andy Bauer" >
+    <meta name="date" content="2015-05-24T22:48:18-0500" >
+    <meta name="copyright" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8">
+    <meta http-equiv="content-style-type" content="text/css">
+    <meta http-equiv="expires" content="0">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/hover.css" media="all">
+<script>
 
 <?php
 
