@@ -89,7 +89,7 @@ function SelectInstructions(select){
 <br>
 <br>
 <b>ZONEMINDER RELEASES HAVE MOVED</b><br>
-This site hosts ZoneMinder unstable, development rpm packages. If you are looking for stable releases of ZoneMinder, you may find them at <a href="https://rpmfusion.org/">RPM Fusion</a>.
+This site hosts i<a href="https://zoneminder.com">ZoneMinder</a> unstable, development rpm packages. If you are looking for stable releases of ZoneMinder, you may find them at <a href="https://rpmfusion.org/">RPM Fusion</a>. Please note that RPM Fusion free is also required for the unstable development rpm packages.
 <br>
 <p>The following distributions are supported:</p>
 <p>
