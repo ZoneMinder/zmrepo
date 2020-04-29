@@ -269,7 +269,8 @@ Please note that the installed ffmpeg libraries appear to have an available &quo
 Apache has been configured as a virtualhost, so just point your browser at the pi's IP address (with or without /zm) and it should come up.<br/>
 </p>
 <p>Standard raspbian install instsructions apply.  dd the image to your sdcard and stick it in your pi.<br/>
-sudo dd if=2020-02-13-raspbian-buster-zoneminder-1.34-0.1.img.bz2 of=/dev/mmcblk0 bs=4M<br/>
+bunzip2 2020-02-13-raspbian-buster-zoneminder-1.34-0.1.img.bz2<br/>
+sudo dd if=2020-02-13-raspbian-buster-zoneminder-1.34-0.1.img of=/dev/mmcblk0 bs=4M<br/>
  </p>
 
           </td>
