@@ -1,20 +1,14 @@
 <!DOCTYPE html>
-<html>
-<head>
-<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
-<title>ZMREPO - A ZoneMinder Repository for RPM and DEB packages</title>
-<meta name="generator" content="Bluefish 2.2.6" >
-<meta name="author" content="Andy Bauer" >
-<meta name="date" content="2015-05-24T22:48:18-0500" >
-<meta name="copyright" content="">
-<meta name="keywords" content="">
-<meta name="description" content="">
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-<meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8">
-<meta http-equiv="content-style-type" content="text/css">
-<meta http-equiv="expires" content="0">
-
-<script type="text/javascript">
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
+    <title>ZMREPO - The ZoneMinder Repository</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/hover.css" media="all">
+<script>
 
 <?php
 
@@ -81,11 +75,18 @@ function SelectInstructions(select){
 </style>
 </head>
 <body bgcolor="#c9c9c9" style="padding-left: 200px;">
-  <p><img src="ZoneMinderSmall.gif" style="float: left; margin-left:-200px;" alt="">
+  <p><img src="ZoneMinderSmall.gif" width="175" height="75" style="position:absolute; top:0; left:0;" alt="">
+  <div class="nav" style="position: absolute; top: 75px; left: 0;">
+    <ul>
+      <li><a href="#RPM">RPM Fedora/Centos/etc</a></li>
+      <li><a href="#DEB">DEB Debian/Ubuntu/etc</a></li>
+      <li><a href="#IMG">IMG Raspbian</a></li>
+    </ul>
+  </div>
   <font size="5" style="font-size: 18pt" color="#336699"><b>Welcome to ZMREPO<br>
-  A <a href="http://www.zoneminder.com/">ZoneMinder</a> Repository for RPM and DEB packages</b></font></p>
+  The <a href="http://www.zoneminder.com/">ZoneMinder</a> Repository of packages</b></font></p>
 <div id="RPM">
-<fieldset><legend>RPM</legend>
+<fieldset><legend><a name="RPM">RPM</a></legend>
 <br>
 <br>
 <b>ZONEMINDER RELEASES HAVE MOVED</b><br>
@@ -203,7 +204,7 @@ Select your Distro to Display the Appropriate Installation Instructions: <select
 </fieldset>
 </div><!--END RPM-->
 <div id="DEB">
-  <fieldset><legend>Debian/Ubuntu Packages</legend>
+  <fieldset><legend><a name="DEB">Debian/Ubuntu Packages</a></legend>
   <b>Installation guide for stable version</b><br>
   If you are a normal user looking to install a stable version of ZoneMinder, you should follow our comprehensive installation guides available in the online documentation for <a href="https://zoneminder.readthedocs.io/en/latest/installationguide/debian.html">Debian</a> and for <a href="https://zoneminder.readthedocs.io/en/latest/installationguide/ubuntu.html">Ubuntu</a>.
 
@@ -250,6 +251,31 @@ Then do:<br/>
 sudo apt-get update<br/>
 sudo apt-get install zoneminder<br/>
   </fieldset> 
+  <fieldset><legend><a name="IMG">System Images</a></legend>
+      <table>
+        <tr>
+          <th>Filename</th><th>Description</th>
+        </tr>
+        <tr>
+          <td><a href="/ftp/system_images/2020-02-13-raspbian-buster-zoneminder-1.34-0.1.img.bz2">2020-02-13-raspbian-buster-zoneminder-1.34-0.1.img.bz2</a></td>
+          <td>
+<p>
+First release of a raspbian image with ZoneMinder already installed. Based on 2020-02-13-raspbian-buster-lite. <br/>
+Please note that I have NOT configured multi-server, as I am assuming we will not be running more than 6 cameras on it.<br/>
+This image was built on a pi 3b.  I successfully run 4 720p cameras @10fps on something like it.  You should be able to as well. Please note that the pi does not have a lot of ram for buffers, so your camera's keyframe (or I-frame) interval needs to be low.  Like &lt;10fps.<br/>
+This is a stand-alone install, complete with MariaDB, apache and ZoneMinder.<br/>
+Please note that the installed ffmpeg libraries appear to have an available &quot;rpi&quot; hwaccel available.  I'm not sure at this time if it has any effect, but to use it you would have to specify rpi as HWAccel in the monitor settings.<br/>
+ This image will track 1.34 stable releases from ZMRepo.<br/>
+Apache has been configured as a virtualhost, so just point your browser at the pi's IP address (with or without /zm) and it should come up.<br/>
+</p>
+<p>Standard raspbian install instsructions apply.  dd the image to your sdcard and stick it in your pi.<br/>
+sudo dd if=2020-02-13-raspbian-buster-zoneminder-1.34-0.1.img.bz2 of=/dev/mmcblk0 bs=4M<br/>
+ </p>
+
+          </td>
+        </tr>
+      </table>
+  </fieldset>
 </div>
 </body>
 </html>
