@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon" />
     <title>ZMREPO - The ZoneMinder Repository</title>
+<!--
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/animate.css">
     <link rel="stylesheet" href="/css/hover.css" media="all">
+-->
 <script>
-
 <?php
-
 $zmrepo_el7_rpms = glob("el/7/x86_64/zmrepo-7-*.noarch.rpm");
 $zmrepo_el8_rpms = glob("el/8/x86_64/zmrepo-8-*.noarch.rpm");
 $zmrepo_f30_rpms = glob("fc/30/x86_64/zmrepo-30-*.noarch.rpm");
@@ -26,7 +26,6 @@ $zmrepo_el7_rpm = basename(end($zmrepo_el7_rpms));
 $zmrepo_el8_rpm = basename(end($zmrepo_el8_rpms));
 $zmrepo_f30_rpm = basename(end($zmrepo_f30_rpms));
 $zmrepo_f31_rpm = basename(end($zmrepo_f31_rpms));
-
 ?>
 
 var Instructions = new Array()
@@ -74,8 +73,8 @@ function SelectInstructions(select){
   }
 </style>
 </head>
-<body bgcolor="#c9c9c9" style="padding-left: 200px;">
-  <p><img src="ZoneMinderSmall.gif" width="175" height="75" style="position:absolute; top:0; left:0;" alt="">
+<body>
+  <p><img id="logo" src="ZoneMinderSmall.gif" width="175" height="75" style="position:absolute; top:0; left:0;" alt="">
   <div class="nav" style="position: absolute; top: 75px; left: 0;">
     <ul>
       <li><a href="#RPM">RPM Fedora/Centos/etc</a></li>
