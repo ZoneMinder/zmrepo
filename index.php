@@ -6,10 +6,10 @@
     <title>ZMREPO - The ZoneMinder Repository</title>
 <!--
     <link rel="stylesheet" href="/css/bootstrap.css">
-    <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/animate.css">
     <link rel="stylesheet" href="/css/hover.css" media="all">
 -->
+    <link rel="stylesheet" href="/css/main.css">
 <script>
 <?php
 $zmrepo_el7_rpms = glob("el/7/x86_64/zmrepo-7-*.noarch.rpm");
@@ -60,30 +60,20 @@ function SelectInstructions(select){
 	document.getElementById('InstText').innerHTML = Instructions[selected];
 }
 </script>
-<style>
-  table {
-    text-align: center;
-    border-collapse: collapse;
-    border-spacing: 0;
-  }
-  td,th {
-    border: 1px solid black; 
-    padding: 0.04in;
-    text-align: left;
-  }
-</style>
 </head>
 <body>
-  <p><img id="logo" src="ZoneMinderSmall.gif" width="175" height="75" style="position:absolute; top:0; left:0;" alt="">
-  <div class="nav" style="position: absolute; top: 75px; left: 0;">
-    <ul>
-      <li><a href="#RPM">RPM Fedora/Centos/etc</a></li>
-      <li><a href="#DEB">DEB Debian/Ubuntu/etc</a></li>
-      <li><a href="#IMG">IMG Raspbian</a></li>
-    </ul>
-  </div>
-  <font size="5" style="font-size: 18pt" color="#336699"><b>Welcome to ZMREPO<br>
-  The <a href="http://www.zoneminder.com/">ZoneMinder</a> Repository of packages</b></font></p>
+    <img id="logo" src="ZoneMinderSmall.gif" width="175" height="75" style="position:absolute; top:15px; left:20px;" alt="">
+    <div class="nav" style="position: absolute; top: 100px; left: 0;">
+      <ul>
+        <li><a href="#RPM">RPM Fedora/Centos/etc</a></li>
+        <li><a href="#DEB">DEB Debian/Ubuntu/etc</a></li>
+        <li><a href="#IMG">IMG Raspbian</a></li>
+      </ul>
+    </div>
+  <p>
+    <font size="5" style="font-size: 18pt" color="#336699"><b>Welcome to ZMREPO<br>
+    The <a href="http://www.zoneminder.com/">ZoneMinder</a> Repository of packages</b></font>
+  </p>
 <div id="RPM">
 <fieldset><legend><a name="RPM">RPM</a></legend>
 <br>
