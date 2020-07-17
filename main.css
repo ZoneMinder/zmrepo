@@ -1,0 +1,197 @@
+body {
+    color: #484848;
+    background-color:#c9c9c9;
+    padding-left: 200px;
+}
+
+#logo {
+  margin: 0 auto;
+}
+
+p.small {
+	font-size: 18px;
+}
+
+.navbar-brand {
+	font-size: 23px;
+}
+
+#top {
+	text-align: center;
+	color: #fff;
+    margin-bottom: 0px;
+    background-image: url('/images/background2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#top h1 {
+	margin-bottom: 30px;
+}
+
+h1 {
+	padding-bottom: 9px;
+	margin: 40px 0 20px;
+	border-bottom: 1px solid #eee;
+}
+
+.navbar {
+	background:rgba(0,0,0,0);
+	border: 0;
+	margin-bottom: 0;
+}
+
+.navbar li {
+	font-size:16px;
+}
+
+#top .jumbotron {
+	background-color: inherit;
+}
+
+#top .jumbotron .container {
+	max-width: 600px;
+}
+
+.navbar a {
+	color: #fff !important;
+    
+}
+
+.navbar-nav > li.current > a, .navbar a:hover {
+	color: #03A9F4 !important;
+	
+}
+
+@media (min-width: 768px) {
+    #top .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
+
+    #top .navbar .navbar-collapse {
+        text-align: center;
+    }
+}
+
+#info {
+	text-align: center;
+	color: #484848;
+	font-size: 19px;
+}
+
+#info ul {
+	text-align: left;
+	list-style-image: url('/images/SVGs/Tick.svg');
+}
+
+#footer {
+	text-align: center;
+	padding-top: 9px;
+	margin: 40px 0 20px;
+	border-top: 1px solid #eee;
+}
+
+#info h2 {
+	margin-top:50px;
+	margin-bottom:30px;
+}
+
+.row .thumbnail {
+	border: none;
+}
+
+.caption h2 {
+	text-align: center;
+}
+
+.bs-callout {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #eee;
+    border-left-width: 5px;
+    border-radius: 3px;
+}
+.bs-callout h4 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.bs-callout p:last-child {
+    margin-bottom: 0;
+}
+.bs-callout code {
+    border-radius: 3px;
+}
+.bs-callout+.bs-callout {
+    margin-top: -5px;
+}
+.bs-callout-default {
+    border-left-color: #777;
+}
+.bs-callout-default h4 {
+    color: #777;
+}
+.bs-callout-gentoo {
+    border-left-color: #6826BB;
+}
+.bs-callout-gentoo h4 {
+    color: #6826BB;
+}
+
+.bs-callout-ubuntu {
+    border-left-color: #FF6306;
+}
+.bs-callout-ubuntu h4 {
+    color: #FF6306;
+}
+
+.bs-callout-fedora {
+    border-left-color: #00457E;
+}
+.bs-callout-fedora h4 {
+    color: #00457E;
+}
+
+
+.bs-callout-debian {
+    border-left-color: #D80852;
+}
+.bs-callout-debian h4 {
+    color: #D80852;
+}
+
+#accordion .panel {
+	border: 0;
+}
+
+#divRecentPosts ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#divRecentPosts li {
+	border-bottom: dotted 1px #ccc;
+}
+
+#divRecentPosts a {
+	font-size: 22px;
+}
+
+#divRecentPosts p {
+	font-size: 11px;
+	padding: 0;
+	margin: 0;
+}
+ table {
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  td,th {
+    border: 1px solid black;
+    padding: 0.04in;
+    text-align: left;
+  }
+
