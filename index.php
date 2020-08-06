@@ -14,18 +14,18 @@
 <?php
 $zmrepo_el7_rpms = glob("el/7/x86_64/zmrepo-7-*.noarch.rpm");
 $zmrepo_el8_rpms = glob("el/8/x86_64/zmrepo-8-*.noarch.rpm");
-$zmrepo_f30_rpms = glob("fc/30/x86_64/zmrepo-30-*.noarch.rpm");
 $zmrepo_f31_rpms = glob("fc/31/x86_64/zmrepo-31-*.noarch.rpm");
+$zmrepo_f32_rpms = glob("fc/32/x86_64/zmrepo-32-*.noarch.rpm");
 
 natsort($zmrepo_el7_rpms);
 natsort($zmrepo_el8_rpms);
-natsort($zmrepo_f30_rpms);
 natsort($zmrepo_f31_rpms);
+natsort($zmrepo_f32_rpms);
 
 $zmrepo_el7_rpm = basename(end($zmrepo_el7_rpms));
 $zmrepo_el8_rpm = basename(end($zmrepo_el8_rpms));
-$zmrepo_f30_rpm = basename(end($zmrepo_f30_rpms));
 $zmrepo_f31_rpm = basename(end($zmrepo_f31_rpms));
+$zmrepo_f32_rpm = basename(end($zmrepo_f32_rpms));
 ?>
 
 var Instructions = new Array()
@@ -43,15 +43,15 @@ Instructions[2] = '<p><b>Installation instructions for ZoneMinder development rp
 						'sudo dnf install zoneminder<br>' +
 						'less /usr/share/doc/zoneminder-*/README<br></font></p></div>'
 
-Instructions[3] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 30 (x86_64, or armv7fl architectures)</b></p>' +
-						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/fc/30/x86_64/<?php echo $zmrepo_f30_rpm; ?><br>' +
-						'sudo dnf install --nogpgcheck <?php echo $zmrepo_f30_rpm; ?><br>' +
+Instructions[3] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 31 (x86_64, armv7fl, or aarch64 architectures)</b></p>' +
+						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/fc/31/x86_64/<?php echo $zmrepo_f31_rpm; ?><br>' +
+						'sudo dnf install --nogpgcheck <?php echo $zmrepo_f31_rpm; ?><br>' +
 						'sudo dnf install zoneminder<br>' +
 						'less /usr/share/doc/zoneminder-common/README<br></font></p></div>'
  
-Instructions[4] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 31 (x86_64, or armv7fl architectures)</b></p>' +
-						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/fc/31/x86_64/<?php echo $zmrepo_f31_rpm; ?><br>' +
-						'sudo dnf install --nogpgcheck <?php echo $zmrepo_f31_rpm; ?><br>' +
+Instructions[4] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 32 (x86_64, or aarch64 architectures)</b></p>' +
+						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/fc/32/x86_64/<?php echo $zmrepo_f32_rpm; ?><br>' +
+						'sudo dnf install --nogpgcheck <?php echo $zmrepo_f32_rpm; ?><br>' +
 						'sudo dnf install zoneminder<br>' +
 						'less /usr/share/doc/zoneminder-common/README<br></font></p></div>'
  
@@ -85,8 +85,8 @@ This site hosts i<a href="https://zoneminder.com">ZoneMinder</a> unstable, devel
 <p>
 <a href="el/7">EL7</a> (CentOS/RHEL/SL)<br>
 <a href="el/8">EL8</a> (CentOS/RHEL/SL)<br>
-<a href="fc/30">F30</a> (Fedora 30)<br>
-<a href="fc/31">F31</a> (Fedora 31)<br>
+<a href="fc/31">F30</a> (Fedora 31)<br>
+<a href="fc/32">F31</a> (Fedora 32)<br>
 </p>
 <p align="center" style="font-weight: bold">SUPPORT MATRIX</p>
 <table align="center" cellspacing="0">
@@ -106,23 +106,6 @@ This site hosts i<a href="https://zoneminder.com">ZoneMinder</a> unstable, devel
 			Fedora
 		</td>
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			30
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			<a href="fc/30/SRPMS">source</a>
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			<a href="fc/30/x86_64">x86_64</a>
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
-			<a href="fc/30/armhfp">armhfp</a>
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
-			<a href="fc/30/aarch64">aarch64</a>
-		</td>
-	</tr>
-	<tr align="center" valign="center">
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
 			31
 		</td>
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
@@ -136,6 +119,23 @@ This site hosts i<a href="https://zoneminder.com">ZoneMinder</a> unstable, devel
 		</td>
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
 			<a href="fc/31/aarch64">aarch64</a>
+		</td>
+	</tr>
+	<tr align="center" valign="center">
+		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+			32
+		</td>
+		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+			<a href="fc/32/SRPMS">source</a>
+		</td>
+		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+			<a href="fc/32/x86_64">x86_64</a>
+		</td>
+		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
+			n/a
+		</td>
+		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
+			<a href="fc/32/aarch64">aarch64</a>
 		</td>
 	</tr>
 	<tr align="center" valign="center">
@@ -182,8 +182,8 @@ Select your Distro to Display the Appropriate Installation Instructions: <select
 <option value="0">Choose your Distro</option>
 <option value="1">EL7 CentOS/RHEL/SL 7</option>
 <option value="2">EL8 CentOS/RHEL/SL 8</option>
-<option value="3">F30 Fedora 30</option>
-<option value="4">F31 Fedora 31</option>
+<option value="3">F31 Fedora 31</option>
+<option value="4">F32 Fedora 32</option>
 </select>
 </form>
 <br>
