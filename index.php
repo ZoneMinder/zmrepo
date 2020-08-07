@@ -85,8 +85,8 @@ This site hosts i<a href="https://zoneminder.com">ZoneMinder</a> unstable, devel
 <p>
 <a href="el/7">EL7</a> (CentOS/RHEL/SL)<br>
 <a href="el/8">EL8</a> (CentOS/RHEL/SL)<br>
-<a href="fc/31">F30</a> (Fedora 31)<br>
-<a href="fc/32">F31</a> (Fedora 32)<br>
+<a href="fc/31">F31</a> (Fedora 31)<br>
+<a href="fc/32">F32</a> (Fedora 32)<br>
 </p>
 <p align="center" style="font-weight: bold">SUPPORT MATRIX</p>
 <table align="center" cellspacing="0">
