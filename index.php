@@ -32,29 +32,42 @@ var Instructions = new Array()
 Instructions[0] = ' '
 
 Instructions[1] = '<p><b>Installation instructions for ZoneMinder development rpms on EL7 distributions (x86_64 architectures only)</b></p>' +
-						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/el/7/x86_64/<?php echo $zmrepo_el7_rpm; ?><br>' +
-						'sudo yum install --nogpgcheck <?php echo $zmrepo_el7_rpm; ?><br>' +
+                                                '<div style="border:1px dashed #000"><p><font face=Courier>' +
+                                                'sudo yum install epel-release<br>' +
+                                                'sudo yum install https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm<br>' +
+						'sudo yum install http://zmrepo.zoneminder.com/el/7/x86_64/<?php echo $zmrepo_el7_rpm; ?><br>' +
 						'sudo yum install zoneminder<br>' +
-						'less /usr/share/doc/zoneminder-*/README<br></font></p></div>'
+						'less /usr/share/doc/zoneminder-*/README<br>' +
+						'</font></p></div>'
 
 Instructions[2] = '<p><b>Installation instructions for ZoneMinder development rpms on EL8 distributions (x86_64 architectures only)</b></p>' +
-						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/el/8/x86_64/<?php echo $zmrepo_el8_rpm; ?><br>' +
+                                                '<div style="border:1px dashed #000"><p><font face=Courier>' +
+                                                'sudo dnf install epel-release<br>' +
+                                                'sudo dnf install https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm<br>' +
+                                                'sudo dnf install dnf-plugins-core<br>' +
+                                                'sudo dnf config-manager --set-enabled PowerTools' +
+						'wget http://zmrepo.zoneminder.com/el/8/x86_64/<?php echo $zmrepo_el8_rpm; ?><br>' +
 						'sudo dnf install --nogpgcheck <?php echo $zmrepo_el8_rpm; ?><br>' +
 						'sudo dnf install zoneminder<br>' +
-						'less /usr/share/doc/zoneminder-*/README<br></font></p></div>'
+						'less /usr/share/doc/zoneminder-*/README<br>' +
+						'</font></p></div>'
 
-Instructions[3] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 32 (x86_64, armv7fl, or aarch64 architectures)</b></p>' +
-						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/fc/32/x86_64/<?php echo $zmrepo_f32_rpm; ?><br>' +
+Instructions[3] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 32 (x86_64 or aarch64 architectures)</b></p>' +
+                                                '<div style="border:1px dashed #000"><p><font face=Courier>' +
+						'wget http://zmrepo.zoneminder.com/fc/32/x86_64/<?php echo $zmrepo_f32_rpm; ?><br>' +
 						'sudo dnf install --nogpgcheck <?php echo $zmrepo_f32_rpm; ?><br>' +
 						'sudo dnf install zoneminder<br>' +
-						'less /usr/share/doc/zoneminder-common/README<br></font></p></div>'
+						'less /usr/share/doc/zoneminder-common/README<br>' +
+						'</font></p></div>'
  
-Instructions[4] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 33 (x86_64, or aarch64 architectures)</b></p>' +
-						'<div style="border:1px dashed #000"><p><font face=Courier>wget http://zmrepo.zoneminder.com/fc/33/x86_64/<?php echo $zmrepo_f33_rpm; ?><br>' +
+Instructions[4] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 33 (x86_64 or aarch64 architectures)</b></p>' +
+                                                '<div style="border:1px dashed #000"><p><font face=Courier>' +
+						'wget http://zmrepo.zoneminder.com/fc/33/x86_64/<?php echo $zmrepo_f33_rpm; ?><br>' +
 						'sudo dnf install --nogpgcheck <?php echo $zmrepo_f33_rpm; ?><br>' +
 						'sudo dnf install zoneminder<br>' +
-						'less /usr/share/doc/zoneminder-common/README<br></font></p></div>'
- 
+						'less /usr/share/doc/zoneminder-common/README<br>' +
+						'</font></p></div>'
+
 function SelectInstructions(select){
 	selected = select.selectedIndex;
 	document.getElementById('InstText').innerHTML = Instructions[selected];
@@ -102,6 +115,9 @@ This site hosts <a href="https://zoneminder.com">ZoneMinder</a> unstable, develo
 		</td>
 	</tr>
 	<tr align="center" valign="center">
+		<td rowspan="2" style="font-weight: bold; border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+			Fedora
+		</td>
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
 			32
 		</td>
@@ -119,9 +135,6 @@ This site hosts <a href="https://zoneminder.com">ZoneMinder</a> unstable, develo
 		</td>
 	</tr>
 	<tr align="center" valign="center">
-		<td rowspan="2" style="font-weight: bold; border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			Fedora
-		</td>
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
 			33
 		</td>
@@ -132,7 +145,7 @@ This site hosts <a href="https://zoneminder.com">ZoneMinder</a> unstable, develo
 			<a href="fc/33/x86_64">x86_64</a>
 		</td>
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
-			<a href="fc/33/armhfp">armhfp</a>
+			n/a
 		</td>
 		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
 			<a href="fc/33/aarch64">aarch64</a>
