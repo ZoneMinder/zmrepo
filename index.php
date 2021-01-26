@@ -28,180 +28,189 @@ $zmrepo_f32_rpm = basename(end($zmrepo_f32_rpms));
 $zmrepo_f33_rpm = basename(end($zmrepo_f33_rpms));
 ?>
 
-var Instructions = new Array()
-Instructions[0] = ' '
+var Instructions = [];
+Instructions[0] = ' ';
 
 Instructions[1] = '<p><b>Installation instructions for ZoneMinder development rpms on EL7 distributions (x86_64 architectures only)</b></p>' +
-                                                '<div style="border:1px dashed #000"><p><font face=Courier>' +
-                                                'sudo yum install epel-release<br>' +
-                                                'sudo yum install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm<br>' +
-						'sudo yum install --nogpgcheck http://zmrepo.zoneminder.com/el/7/x86_64/<?php echo $zmrepo_el7_rpm; ?><br>' +
-						'sudo yum install zoneminder<br>' +
-						'less /usr/share/doc/zoneminder-*/README<br>' +
-						'</font></p></div>'
+                  '<div style="border:1px dashed #000"><p><font face=Courier>' +
+                  'sudo yum install epel-release<br>' +
+                  'sudo yum install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm<br>' +
+                  'sudo yum install --nogpgcheck http://zmrepo.zoneminder.com/el/7/x86_64/<?php echo $zmrepo_el7_rpm; ?><br>' +
+                  'sudo yum install zoneminder<br>' +
+                  'less /usr/share/doc/zoneminder-*/README<br>' +
+                  '</font></p></div>';
 
 Instructions[2] = '<p><b>Installation instructions for ZoneMinder development rpms on EL8 distributions (x86_64 architectures only)</b></p>' +
-                                                '<div style="border:1px dashed #000"><p><font face=Courier>' +
-                                                'sudo dnf install epel-release<br>' +
-                                                'sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm<br>' +
-                                                'sudo dnf install dnf-plugins-core<br>' +
-                                                'sudo dnf config-manager --set-enabled PowerTools<br>' +
-						'sudo dnf install --nogpgcheck http://zmrepo.zoneminder.com/el/8/x86_64/<?php echo $zmrepo_el8_rpm; ?><br>' +
-						'sudo dnf install zoneminder<br>' +
-						'less /usr/share/doc/zoneminder-*/README<br>' +
-						'</font></p></div>'
+                  '<div style="border:1px dashed #000"><p><font face=Courier>' +
+                  'sudo dnf install epel-release<br>' +
+                  'sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm<br>' +
+                  'sudo dnf install dnf-plugins-core<br>' +
+                  'sudo dnf config-manager --set-enabled PowerTools<br>' +
+                  'sudo dnf install --nogpgcheck http://zmrepo.zoneminder.com/el/8/x86_64/<?php echo $zmrepo_el8_rpm; ?><br>' +
+                  'sudo dnf install zoneminder<br>' +
+                  'less /usr/share/doc/zoneminder-*/README<br>' +
+                  '</font></p></div>';
 
 Instructions[3] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 32 (x86_64 or aarch64 architectures)</b></p>' +
-                                                '<div style="border:1px dashed #000"><p><font face=Courier>' +
-						'sudo dnf install --nogpgcheck http://zmrepo.zoneminder.com/fc/32/x86_64/<?php echo $zmrepo_f32_rpm; ?><br>' +
-						'sudo dnf install zoneminder<br>' +
-						'less /usr/share/doc/zoneminder-common/README<br>' +
-						'</font></p></div>'
+                  '<div style="border:1px dashed #000"><p><font face=Courier>' +
+                  'sudo dnf install --nogpgcheck http://zmrepo.zoneminder.com/fc/32/x86_64/<?php echo $zmrepo_f32_rpm; ?><br>' +
+                  'sudo dnf install zoneminder<br>' +
+                  'less /usr/share/doc/zoneminder-common/README<br>' +
+                  '</font></p></div>';
  
 Instructions[4] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 33 (x86_64 or aarch64 architectures)</b></p>' +
-                                                '<div style="border:1px dashed #000"><p><font face=Courier>' +
-						'sudo dnf install --nogpgcheck http://zmrepo.zoneminder.com/fc/33/x86_64/<?php echo $zmrepo_f33_rpm; ?><br>' +
-						'sudo dnf install zoneminder<br>' +
-						'less /usr/share/doc/zoneminder-common/README<br>' +
-						'</font></p></div>'
+                  '<div style="border:1px dashed #000"><p><font face=Courier>' +
+                  'sudo dnf install --nogpgcheck http://zmrepo.zoneminder.com/fc/33/x86_64/<?php echo $zmrepo_f33_rpm; ?><br>' +
+                  'sudo dnf install zoneminder<br>' +
+                  'less /usr/share/doc/zoneminder-common/README<br>' +
+                  '</font></p></div>';
 
 function SelectInstructions(select){
-	selected = select.selectedIndex;
-	document.getElementById('InstText').innerHTML = Instructions[selected];
+  selected = select.selectedIndex;
+  document.getElementById('InstText').innerHTML = Instructions[selected];
 }
 </script>
 </head>
-<body>
-    <img id="logo" src="ZoneMinderSmall.gif" width="175" height="75" style="position:absolute; top:15px; left:20px;" alt="">
-    <div class="nav" style="position: absolute; top: 100px; left: 0;">
-      <ul>
-        <li><a href="#RPM">RPM Fedora/Centos/etc</a></li>
-        <li><a href="#DEB">DEB Debian/Ubuntu/etc</a></li>
-        <li><a href="#IMG">IMG Raspbian</a></li>
-      </ul>
-    </div>
-  <p>
-    <font size="5" style="font-size: 18pt" color="#336699"><b>Welcome to ZMREPO<br>
-    The <a href="http://www.zoneminder.com/">ZoneMinder</a> Repository of packages</b></font>
-  </p>
-<div id="RPM">
-<fieldset><legend><a name="RPM">RPM</a></legend>
-<br>
-<br>
-<b>ZONEMINDER RPM RELEASES HAVE MOVED</b><br>
-This site hosts <a href="https://zoneminder.com">ZoneMinder</a> unstable, development rpm packages. If you are looking for stable releases of ZoneMinder, you may find them at <a href="https://rpmfusion.org/">RPM Fusion</a>. Please note that RPM Fusion free is also required for the unstable development rpm packages.
-<br>
-<p>The following distributions are supported:</p>
-<p>
-<a href="el/7">EL7</a> (CentOS/RHEL/SL)<br>
-<a href="el/8">EL8</a> (CentOS/RHEL/SL)<br>
-<a href="fc/32">F32</a> (Fedora 32)<br>
-<a href="fc/33">F33</a> (Fedora 33)<br>
-</p>
-<p align="center" style="font-weight: bold">SUPPORT MATRIX</p>
-<table align="center" cellspacing="0">
-	<tr align="center" valign="center" style="font-weight: bold">
-		<td style="border-top: 1px solid black; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			Distribution
-		</td>
-		<td style="border-top: 1px solid black; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			Version
-		</td>
-		<td colspan="4" style="border: 1px solid black; padding: 0.04in">
-			Arch
-		</td>
-	</tr>
-	<tr align="center" valign="center">
-		<td rowspan="2" style="font-weight: bold; border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			Fedora
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			32
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			<a href="fc/32/SRPMS">source</a>
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			<a href="fc/32/x86_64">x86_64</a>
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
-			n/a
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
-			<a href="fc/32/aarch64">aarch64</a>
-		</td>
-	</tr>
-	<tr align="center" valign="center">
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			33
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			<a href="fc/33/SRPMS">source</a>
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			<a href="fc/33/x86_64">x86_64</a>
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
-			n/a
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
-			<a href="fc/33/aarch64">aarch64</a>
-		</td>
-	</tr>
-	<tr align="center" valign="center">
-		<td rowspan="2" style="font-weight: bold; border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			CentOS/RHEL/SL
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			7
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			<a href="el/7/SRPMS">source</a>
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			<a href="el/7/x86_64">x86_64</a>
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
-			n/a
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
-			n/a
-		</td>
-	</tr>
-	<tr align="center" valign="center">
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			8
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			<a href="el/8/SRPMS">source</a>
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
-			<a href="el/8/x86_64">x86_64</a>
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
-			n/a
-		</td>
-		<td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
-			<a href="el/8/aarch64">aarch64</a>
-		</td>
-	</tr>
-</table>
-<br>
-<form autocomplete="off">
-Select your Distro to Display the Appropriate Installation Instructions: <select onChange='SelectInstructions(this);'>
-<option value="0">Choose your Distro</option>
-<option value="1">EL7 CentOS/RHEL/SL 7</option>
-<option value="2">EL8 CentOS/RHEL/SL 8</option>
-<option value="3">F32 Fedora 32</option>
-<option value="4">F33 Fedora 33</option>
-</select>
-</form>
-<br>
-<div id="InstText"></div>
 
-<p>Once ZoneMinder has been installed, it is critically important that you read the README file under /usr/share/doc/zoneminder.  ZoneMinder will not run without completing the steps outlined in the README.</p>
-</fieldset>
+<body>
+<img id="logo" src="ZoneMinderSmall.gif" width="175" height="75" style="position:absolute; top:15px; left:20px;" alt="">
+
+<div class="nav" style="position: absolute; top: 100px; left: 0;">
+  <ul>
+    <li><a href="#RPM">RPM Fedora/Centos/etc</a></li>
+    <li><a href="#DEB">DEB Debian/Ubuntu/etc</a></li>
+    <li><a href="#IMG">IMG Raspbian</a></li>
+  </ul>
+</div>
+
+<p>
+  <font size="5" style="font-size: 18pt" color="#336699"><b>Welcome to ZMREPO<br>
+  The <a href="http://www.zoneminder.com/">ZoneMinder</a> Repository of packages</b></font>
+</p>
+
+<div id="RPM">
+  <fieldset><legend><a name="RPM">RPM</a></legend>
+  <br>
+  <br>
+  <b>ZONEMINDER RPM RELEASES HAVE MOVED</b><br>
+  This site hosts <a href="https://zoneminder.com">ZoneMinder</a> unstable, development rpm packages. If you are looking for stable releases of ZoneMinder, you may find them at <a href="https://rpmfusion.org/">RPM Fusion</a>. Please note that RPM Fusion free is also required for the unstable development rpm packages.
+  <br>
+  <p>The following distributions are supported:</p>
+  <p>
+    <a href="el/7">EL7</a> (CentOS/RHEL/SL)<br>
+    <a href="el/8">EL8</a> (CentOS/RHEL/SL)<br>
+    <a href="fc/32">F32</a> (Fedora 32)<br>
+    <a href="fc/33">F33</a> (Fedora 33)<br>
+  </p>
+
+  <p align="center" style="font-weight: bold">SUPPORT MATRIX</p>
+  <table align="center" cellspacing="0">
+    <tr align="center" valign="center" style="font-weight: bold">
+      <td style="border-top: 1px solid black; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+        Distribution
+      </td>
+      <td style="border-top: 1px solid black; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+        Version
+      </td>
+      <td colspan="4" style="border: 1px solid black; padding: 0.04in">
+        Arch
+      </td>
+    </tr>
+    <tr align="center" valign="center">
+      <td rowspan="2" style="font-weight: bold; border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+        Fedora
+      </td>
+      <td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+        32
+      </td>
+      <td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+        <a href="fc/32/SRPMS">source</a>
+      </td>
+      <td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+        <a href="fc/32/x86_64">x86_64</a>
+      </td>
+      <td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
+        n/a
+      </td>
+      <td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
+        <a href="fc/32/aarch64">aarch64</a>
+      </td>
+    </tr>
+    <tr align="center" valign="center">
+      <td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+        33
+      </td>
+      <td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+        <a href="fc/33/SRPMS">source</a>
+      </td>
+      <td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+        <a href="fc/33/x86_64">x86_64</a>
+      </td>
+      <td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
+        n/a
+      </td>
+      <td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
+        <a href="fc/33/aarch64">aarch64</a>
+      </td>
+    </tr>
+    <tr align="center" valign="center">
+      <td rowspan="2" style="font-weight: bold; border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+        CentOS/RHEL/SL
+      </td>
+      <td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+        7
+      </td>
+      <td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+        <a href="el/7/SRPMS">source</a>
+      </td>
+      <td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+        <a href="el/7/x86_64">x86_64</a>
+      </td>
+      <td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
+        n/a
+      </td>
+      <td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
+        n/a
+      </td>
+    </tr>
+    <tr align="center" valign="center">
+      <td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+        8
+      </td>
+      <td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+        <a href="el/8/SRPMS">source</a>
+      </td>
+      <td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: none; padding: 0.04in">
+        <a href="el/8/x86_64">x86_64</a>
+      </td>
+      <td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
+        n/a
+      </td>
+      <td style="border-top: none; border-bottom: 1px solid black; border-left: 1px solid black; border-right: 1px solid black; padding: 0.04in">
+        <a href="el/8/aarch64">aarch64</a>
+      </td>
+    </tr>
+  </table>
+  <br>
+  <form autocomplete="off">
+    Select your Distro to Display the Appropriate Installation Instructions:
+    <select onChange='SelectInstructions(this);'>
+      <option value="0">Choose your Distro</option>
+      <option value="1">EL7 CentOS/RHEL/SL 7</option>
+      <option value="2">EL8 CentOS/RHEL/SL 8</option>
+      <option value="3">F32 Fedora 32</option>
+      <option value="4">F33 Fedora 33</option>
+    </select>
+  </form>
+  <br>
+
+  <!-- Div populated by Javascript -->
+  <div id="InstText"></div>
+
+  <p>Once ZoneMinder has been installed, it is critically important that you read the README file under /usr/share/doc/zoneminder.  ZoneMinder will not run without completing the steps outlined in the README.</p>
+  </fieldset>
 </div><!--END RPM-->
+
 <div id="DEB">
   <fieldset><legend><a name="DEB">Debian/Ubuntu Packages</a></legend>
   <b>Installation guide for stable version</b><br>
@@ -277,5 +286,6 @@ sudo dd if=2020-02-13-raspbian-buster-zoneminder-1.34-0.1.img of=/dev/mmcblk0 bs
       </table>
   </fieldset>
 </div>
+
 </body>
 </html>
