@@ -34,8 +34,8 @@ Instructions[0] = ' '
 Instructions[1] = '<p><b>Installation instructions for ZoneMinder development rpms on EL7 distributions (x86_64 architectures only)</b></p>' +
                                                 '<div style="border:1px dashed #000"><p><font face=Courier>' +
                                                 'sudo yum install epel-release<br>' +
-                                                'sudo yum install https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm<br>' +
-						'sudo yum install http://zmrepo.zoneminder.com/el/7/x86_64/<?php echo $zmrepo_el7_rpm; ?><br>' +
+                                                'sudo yum install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm<br>' +
+						'sudo yum install --nogpgcheck http://zmrepo.zoneminder.com/el/7/x86_64/<?php echo $zmrepo_el7_rpm; ?><br>' +
 						'sudo yum install zoneminder<br>' +
 						'less /usr/share/doc/zoneminder-*/README<br>' +
 						'</font></p></div>'
@@ -43,27 +43,24 @@ Instructions[1] = '<p><b>Installation instructions for ZoneMinder development rp
 Instructions[2] = '<p><b>Installation instructions for ZoneMinder development rpms on EL8 distributions (x86_64 architectures only)</b></p>' +
                                                 '<div style="border:1px dashed #000"><p><font face=Courier>' +
                                                 'sudo dnf install epel-release<br>' +
-                                                'sudo dnf install https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm<br>' +
+                                                'sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm<br>' +
                                                 'sudo dnf install dnf-plugins-core<br>' +
-                                                'sudo dnf config-manager --set-enabled PowerTools' +
-						'wget http://zmrepo.zoneminder.com/el/8/x86_64/<?php echo $zmrepo_el8_rpm; ?><br>' +
-						'sudo dnf install --nogpgcheck <?php echo $zmrepo_el8_rpm; ?><br>' +
+                                                'sudo dnf config-manager --set-enabled PowerTools<br>' +
+						'sudo dnf install --nogpgcheck http://zmrepo.zoneminder.com/el/8/x86_64/<?php echo $zmrepo_el8_rpm; ?><br>' +
 						'sudo dnf install zoneminder<br>' +
 						'less /usr/share/doc/zoneminder-*/README<br>' +
 						'</font></p></div>'
 
 Instructions[3] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 32 (x86_64 or aarch64 architectures)</b></p>' +
                                                 '<div style="border:1px dashed #000"><p><font face=Courier>' +
-						'wget http://zmrepo.zoneminder.com/fc/32/x86_64/<?php echo $zmrepo_f32_rpm; ?><br>' +
-						'sudo dnf install --nogpgcheck <?php echo $zmrepo_f32_rpm; ?><br>' +
+						'sudo dnf install --nogpgcheck http://zmrepo.zoneminder.com/fc/32/x86_64/<?php echo $zmrepo_f32_rpm; ?><br>' +
 						'sudo dnf install zoneminder<br>' +
 						'less /usr/share/doc/zoneminder-common/README<br>' +
 						'</font></p></div>'
  
 Instructions[4] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 33 (x86_64 or aarch64 architectures)</b></p>' +
                                                 '<div style="border:1px dashed #000"><p><font face=Courier>' +
-						'wget http://zmrepo.zoneminder.com/fc/33/x86_64/<?php echo $zmrepo_f33_rpm; ?><br>' +
-						'sudo dnf install --nogpgcheck <?php echo $zmrepo_f33_rpm; ?><br>' +
+						'sudo dnf install --nogpgcheck http://zmrepo.zoneminder.com/fc/33/x86_64/<?php echo $zmrepo_f33_rpm; ?><br>' +
 						'sudo dnf install zoneminder<br>' +
 						'less /usr/share/doc/zoneminder-common/README<br>' +
 						'</font></p></div>'
