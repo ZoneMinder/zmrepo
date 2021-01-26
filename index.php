@@ -43,7 +43,7 @@ Instructions[1] = '<p><b>Installation instructions for ZoneMinder development rp
 Instructions[2] = '<p><b>Installation instructions for ZoneMinder development rpms on EL8 distributions (x86_64 architectures only)</b></p>' +
                   '<div style="border:1px dashed #000"><p><font face=Courier>' +
                   'sudo dnf install epel-release<br>' +
-                  'sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm<br>' +
+                  'sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm<br>' +
                   'sudo dnf install dnf-plugins-core<br>' +
                   'sudo dnf config-manager --set-enabled PowerTools<br>' +
                   'sudo dnf install --nogpgcheck http://zmrepo.zoneminder.com/el/8/x86_64/<?php echo $zmrepo_el8_rpm; ?><br>' +
