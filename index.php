@@ -31,7 +31,7 @@ $zmrepo_f34_rpm = basename(end($zmrepo_f34_rpms));
 var Instructions = [];
 Instructions[0] = ' ';
 
-Instructions[1] = '<p><b>Installation instructions for ZoneMinder development rpms on EL7 distributions (x86_64 architectures only)</b></p>' +
+Instructions[1] = '<p><b>Installation instructions for ZoneMinder development rpms on EL7 distributions (x86_64 architecture only)</b></p>' +
                   '<div style="border:1px dashed #000"><p><font face=Courier>' +
                   'sudo yum install epel-release<br>' +
                   'sudo yum install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-7.noarch.rpm<br>' +
@@ -40,7 +40,7 @@ Instructions[1] = '<p><b>Installation instructions for ZoneMinder development rp
                   'less /usr/share/doc/zoneminder-*/README<br>' +
                   '</font></p></div>';
 
-Instructions[2] = '<p><b>Installation instructions for ZoneMinder development rpms on EL8 distributions (x86_64 architectures only)</b></p>' +
+Instructions[2] = '<p><b>Installation instructions for ZoneMinder development rpms on EL8 distributions (x86_64 and aarch64 architectures)</b></p>' +
                   '<div style="border:1px dashed #000"><p><font face=Courier>' +
                   'sudo dnf install epel-release<br>' +
                   'sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm<br>' +
@@ -51,14 +51,14 @@ Instructions[2] = '<p><b>Installation instructions for ZoneMinder development rp
                   'less /usr/share/doc/zoneminder-*/README<br>' +
                   '</font></p></div>';
 
-Instructions[3] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 33 (x86_64 or aarch64 architectures)</b></p>' +
+Instructions[3] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 33 (x86_64 and aarch64 architectures)</b></p>' +
                   '<div style="border:1px dashed #000"><p><font face=Courier>' +
                   'sudo dnf install --nogpgcheck http://zmrepo.zoneminder.com/fc/33/x86_64/<?php echo $zmrepo_f33_rpm; ?><br>' +
                   'sudo dnf install zoneminder<br>' +
                   'less /usr/share/doc/zoneminder-common/README<br>' +
                   '</font></p></div>';
  
-Instructions[4] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 34 (x86_64 or aarch64 architectures)</b></p>' +
+Instructions[4] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 34 (x86_64 and aarch64 architectures)</b></p>' +
                   '<div style="border:1px dashed #000"><p><font face=Courier>' +
                   'sudo dnf install --nogpgcheck http://zmrepo.zoneminder.com/fc/34/x86_64/<?php echo $zmrepo_f34_rpm; ?><br>' +
                   'sudo dnf install zoneminder<br>' +
