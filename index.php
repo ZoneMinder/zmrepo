@@ -14,18 +14,18 @@
 <?php
 $zmrepo_el7_rpms = glob("el/7/x86_64/zmrepo-7-*.noarch.rpm");
 $zmrepo_el8_rpms = glob("el/8/x86_64/zmrepo-8-*.noarch.rpm");
-$zmrepo_f32_rpms = glob("fc/32/x86_64/zmrepo-32-*.noarch.rpm");
 $zmrepo_f33_rpms = glob("fc/33/x86_64/zmrepo-33-*.noarch.rpm");
+$zmrepo_f34_rpms = glob("fc/34/x86_64/zmrepo-34-*.noarch.rpm");
 
 natsort($zmrepo_el7_rpms);
 natsort($zmrepo_el8_rpms);
-natsort($zmrepo_f32_rpms);
 natsort($zmrepo_f33_rpms);
+natsort($zmrepo_f34_rpms);
 
 $zmrepo_el7_rpm = basename(end($zmrepo_el7_rpms));
 $zmrepo_el8_rpm = basename(end($zmrepo_el8_rpms));
-$zmrepo_f32_rpm = basename(end($zmrepo_f32_rpms));
 $zmrepo_f33_rpm = basename(end($zmrepo_f33_rpms));
+$zmrepo_f34_rpm = basename(end($zmrepo_f34_rpms));
 ?>
 
 var Instructions = [];
@@ -51,16 +51,16 @@ Instructions[2] = '<p><b>Installation instructions for ZoneMinder development rp
                   'less /usr/share/doc/zoneminder-*/README<br>' +
                   '</font></p></div>';
 
-Instructions[3] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 32 (x86_64 or aarch64 architectures)</b></p>' +
+Instructions[3] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 33 (x86_64 or aarch64 architectures)</b></p>' +
                   '<div style="border:1px dashed #000"><p><font face=Courier>' +
-                  'sudo dnf install --nogpgcheck http://zmrepo.zoneminder.com/fc/32/x86_64/<?php echo $zmrepo_f32_rpm; ?><br>' +
+                  'sudo dnf install --nogpgcheck http://zmrepo.zoneminder.com/fc/33/x86_64/<?php echo $zmrepo_f33_rpm; ?><br>' +
                   'sudo dnf install zoneminder<br>' +
                   'less /usr/share/doc/zoneminder-common/README<br>' +
                   '</font></p></div>';
  
-Instructions[4] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 33 (x86_64 or aarch64 architectures)</b></p>' +
+Instructions[4] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 34 (x86_64 or aarch64 architectures)</b></p>' +
                   '<div style="border:1px dashed #000"><p><font face=Courier>' +
-                  'sudo dnf install --nogpgcheck http://zmrepo.zoneminder.com/fc/33/x86_64/<?php echo $zmrepo_f33_rpm; ?><br>' +
+                  'sudo dnf install --nogpgcheck http://zmrepo.zoneminder.com/fc/34/x86_64/<?php echo $zmrepo_f34_rpm; ?><br>' +
                   'sudo dnf install zoneminder<br>' +
                   'less /usr/share/doc/zoneminder-common/README<br>' +
                   '</font></p></div>';
@@ -99,8 +99,8 @@ function SelectInstructions(select){
   <p>
     <a href="el/7">EL7</a> (CentOS/RHEL/SL)<br>
     <a href="el/8">EL8</a> (CentOS/RHEL/SL)<br>
-    <a href="fc/32">F32</a> (Fedora 32)<br>
     <a href="fc/33">F33</a> (Fedora 33)<br>
+    <a href="fc/34">F34</a> (Fedora 34)<br>
   </p>
   <br>
   <form autocomplete="off">
@@ -109,8 +109,8 @@ function SelectInstructions(select){
       <option value="0">Choose your Distro</option>
       <option value="1">EL7 CentOS/RHEL/SL 7</option>
       <option value="2">EL8 CentOS/RHEL/SL 8</option>
-      <option value="3">F32 Fedora 32</option>
-      <option value="4">F33 Fedora 33</option>
+      <option value="3">F33 Fedora 33</option>
+      <option value="4">F34 Fedora 34</option>
     </select>
   </form>
   <br>
