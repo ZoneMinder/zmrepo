@@ -132,12 +132,12 @@ function SelectInstructions(select){
   <b>Additional information for advanced users and developers</b><br>
   Packages are also available for development versions. Be aware that these packages are created and uploaded manually from time to time. There is no automated nightly build yet.
   If you are looking for the latest master, best is to clone the git repository and build from source. 
-  <br> 
+  <br/> 
   To download and install (and later update) these packages with apt, please add deb https://zmrepo.zoneminder.com/debian/branch distribution/ 
   to /etc/apt/sources.list or a file under /etc/apt/sources.list.d maybe named zoneminder.list.
-  <br>
-  For example an entry for master snapshot builds on ubuntu would be:
-  <br>
+  <br/>
+  For example an entry for master snapshot builds on ubuntu would be:<br/>
+  <br/>
   deb https://zmrepo.zoneminder.com/debian/master xenial/
 <br><br><br>
 The following is a list of available branches:<br><br>
@@ -151,6 +151,13 @@ The following is a list of available branches:<br><br>
       </a>
     </td>
   </tr>
+  <tr>
+    <td>release-1.36</td>
+    <td>Stable releases of ZoneMinder 1.36.x
+      <a href="https://github.com/ZoneMinder/zoneminder">
+      https://github.com/ZoneMinder/zoneminder
+      </a>
+    </td>
   <tr>
     <td>release-1.34</td>
     <td>Stable releases of ZoneMinder 1.34.x
