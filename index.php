@@ -55,6 +55,7 @@ Instructions[2] = '<p><b>Installation instructions for ZoneMinder development rp
 
 Instructions[3] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 36 (x86_64 and aarch64 architectures)</b></p>' +
                   '<div style="border:1px dashed #000"><p><font face=Courier>' +
+                  'sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-36.noarch.rpm<br>' +
                   'sudo dnf install --nogpgcheck http://zmrepo.zoneminder.com/fc/36/x86_64/<?php echo $zmrepo_f36_rpm; ?><br>' +
                   'sudo dnf install zoneminder<br>' +
                   'less /usr/share/doc/zoneminder-common/README<br>' +
@@ -62,6 +63,7 @@ Instructions[3] = '<p><b>Installation instructions for ZoneMinder development rp
  
 Instructions[4] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 37 (x86_64 and aarch64 architectures)</b></p>' +
                   '<div style="border:1px dashed #000"><p><font face=Courier>' +
+                  'sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-37.noarch.rpm<br>' +
                   'sudo dnf install --nogpgcheck http://zmrepo.zoneminder.com/fc/37/x86_64/<?php echo $zmrepo_f37_rpm; ?><br>' +
                   'sudo dnf install zoneminder<br>' +
                   'less /usr/share/doc/zoneminder-common/README<br>' +
