@@ -31,7 +31,7 @@ $zmrepo_f37_rpm = basename(end($zmrepo_f37_rpms));
 var Instructions = [];
 Instructions[0] = ' ';
 
-Instructions[1] = '<p><b>Installation instructions for ZoneMinder development rpms on EL8 distributions (x86_64 architecture only)</b></p>' +
+Instructions[1] = '<p><b>Installation instructions for ZoneMinder development rpms on EL8 distributions (x86_64 and aarch64 architectures)</b></p>' +
                   '<div style="border:1px dashed #000"><p><font face=Courier>' +
                   'sudo yum install epel-release<br>' +
                   'sudo yum install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm<br>' +
