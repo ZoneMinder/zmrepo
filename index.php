@@ -33,12 +33,12 @@ Instructions[0] = ' ';
 
 Instructions[1] = '<p><b>Installation instructions for ZoneMinder development rpms on EL8 distributions (x86_64 and aarch64 architectures)</b></p>' +
                   '<div style="border:1px dashed #000"><p><font face=Courier>' +
-                  'sudo yum install epel-release<br>' +
-                  'sudo yum install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm<br>' +
+                  'sudo dnf install epel-release<br>' +
+                  'sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm<br>' +
                   'sudo dnf install dnf-plugins-core<br>' +
                   'sudo dnf config-manager --set-enabled powertools<br>' +
-                  'sudo yum install --nogpgcheck http://zmrepo.zoneminder.com/el/8/x86_64/<?php echo $zmrepo_el8_rpm; ?><br>' +
-                  'sudo yum install zoneminder<br>' +
+                  'sudo dnf install --nogpgcheck http://zmrepo.zoneminder.com/el/8/x86_64/<?php echo $zmrepo_el8_rpm; ?><br>' +
+                  'sudo dnf install zoneminder<br>' +
                   'less /usr/share/doc/zoneminder-*/README<br>' +
                   '</font></p></div>';
 
