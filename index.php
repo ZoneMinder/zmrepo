@@ -10,69 +10,77 @@
     <link rel="stylesheet" href="/css/hover.css" media="all">
 -->
     <link rel="stylesheet" href="/css/main.css">
+
 <script>
-<?php
-$zmrepo_el8_rpms = glob("el/8/x86_64/zmrepo-8-*.noarch.rpm");
-$zmrepo_el9_rpms = glob("el/9/x86_64/zmrepo-9-*.noarch.rpm");
-$zmrepo_f36_rpms = glob("fc/36/x86_64/zmrepo-36-*.noarch.rpm");
-$zmrepo_f37_rpms = glob("fc/37/x86_64/zmrepo-37-*.noarch.rpm");
 
-natsort($zmrepo_el8_rpms);
-natsort($zmrepo_el9_rpms);
-natsort($zmrepo_f36_rpms);
-natsort($zmrepo_f37_rpms);
-
-$zmrepo_el8_rpm = basename(end($zmrepo_el8_rpms));
-$zmrepo_el9_rpm = basename(end($zmrepo_el9_rpms));
-$zmrepo_f36_rpm = basename(end($zmrepo_f36_rpms));
-$zmrepo_f37_rpm = basename(end($zmrepo_f37_rpms));
-?>
+function SelectInstructions(select){
+  var selected = select.value;
+  document.getElementById('InstText').innerHTML = Instructions[selected];
+}
 
 var Instructions = [];
 Instructions[0] = ' ';
+<?php
 
-Instructions[1] = '<p><b>Installation instructions for ZoneMinder development rpms on EL8 distributions (x86_64 and aarch64 architectures)</b></p>' +
-                  '<div style="border:1px dashed #000"><p><font face=Courier>' +
-                  'sudo dnf install epel-release<br>' +
-                  'sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm<br>' +
-                  'sudo dnf install dnf-plugins-core<br>' +
-                  'sudo dnf config-manager --set-enabled powertools<br>' +
-                  'sudo dnf install --nogpgcheck http://zmrepo.zoneminder.com/el/8/x86_64/<?php echo $zmrepo_el8_rpm; ?><br>' +
-                  'sudo dnf install zoneminder<br>' +
-                  'less /usr/share/doc/zoneminder-*/README<br>' +
-                  '</font></p></div>';
+$releases = array();
 
-Instructions[2] = '<p><b>Installation instructions for ZoneMinder development rpms on EL9 distributions (x86_64 and aarch64 architectures)</b></p>' +
-                  '<div style="border:1px dashed #000"><p><font face=Courier>' +
-                  'sudo dnf install epel-release<br>' +
-                  'sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm<br>' +
-                  'sudo dnf install dnf-plugins-core<br>' +
-                  'sudo dnf config-manager --set-enabled crb<br>' +
-                  'sudo dnf install --nogpgcheck http://zmrepo.zoneminder.com/el/9/x86_64/<?php echo $zmrepo_el9_rpm; ?><br>' +
-                  'sudo dnf install zoneminder<br>' +
-                  'less /usr/share/doc/zoneminder-*/README<br>' +
-                  '</font></p></div>';
+# Define both rhel and fedora releases here, using the release number ONLY.
+# This array is all you need to change, as new releases are added and old releases are deprecated.
+$releases[] = 8;
+$releases[] = 9;
+$releases[] = 36;
+$releases[] = 37;
 
-Instructions[3] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 36 (x86_64 and aarch64 architectures)</b></p>' +
-                  '<div style="border:1px dashed #000"><p><font face=Courier>' +
-                  'sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-36.noarch.rpm<br>' +
-                  'sudo dnf install --nogpgcheck http://zmrepo.zoneminder.com/fc/36/x86_64/<?php echo $zmrepo_f36_rpm; ?><br>' +
-                  'sudo dnf install zoneminder<br>' +
-                  'less /usr/share/doc/zoneminder-common/README<br>' +
-                  '</font></p></div>';
- 
-Instructions[4] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora 37 (x86_64 and aarch64 architectures)</b></p>' +
-                  '<div style="border:1px dashed #000"><p><font face=Courier>' +
-                  'sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-37.noarch.rpm<br>' +
-                  'sudo dnf install --nogpgcheck http://zmrepo.zoneminder.com/fc/37/x86_64/<?php echo $zmrepo_f37_rpm; ?><br>' +
-                  'sudo dnf install zoneminder<br>' +
-                  'less /usr/share/doc/zoneminder-common/README<br>' +
-                  '</font></p></div>';
+$zmrepo_rpms = array();
+$zmrepo_rpm = array();
+$instructions = array();
 
-function SelectInstructions(select){
-  selected = select.selectedIndex;
-  document.getElementById('InstText').innerHTML = Instructions[selected];
+foreach ($releases as $release) {
+  if ( $release > 30 ) {
+    # Find all the zmrepo rpms for the current release, sort them, and select the most recent
+    $zmrepo_rpms[$release] = glob("fc/".$release."/x86_64/zmrepo-".$release."-*.noarch.rpm");
+    natsort($zmrepo_rpms[$release]);
+    $zmrepo_rpm[$release] = basename(end($zmrepo_rpms[$release]));
+
+    # Build the instruction text in php
+    $instructions[$release] = '<p><b>Installation instructions for ZoneMinder development rpms on Fedora '.$release.' (x86_64 and aarch64 architectures)</b></p>'.
+                              '<div style="border:1px dashed #000"><p><font face=Courier>'.
+                              'sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-'.$release.'.noarch.rpm<br>'.
+                              'sudo dnf install --nogpgcheck http://zmrepo.zoneminder.com/fc/'.$release.'/x86_64/'.$zmrepo_rpm[$release].'<br>'.
+                              'sudo dnf install zoneminder<br>'.
+                              'less /usr/share/doc/zoneminder-common/README<br>'.
+                              '</font></p></div>';
+
+    # Now echo the instruction text as a javascript variable
+    echo "Instructions[".$release."] = '".$instructions[$release]."';".PHP_EOL;;
+
+  } else {
+    # Find all the zmrepo rpms for the current release, sort them, and select the most recent
+    $zmrepo_rpms[$release] = glob("el/".$release."/x86_64/zmrepo-".$release."-*.noarch.rpm");
+    natsort($zmrepo_rpms[$release]);
+    $zmrepo_rpm[$release] = basename(end($zmrepo_rpms[$release]));
+    $repo = ($release == 8) ? "powertools" : "crb";
+
+    # Build the instruction text in php
+    $instructions[$release] = '<p><b>Installation instructions for ZoneMinder development rpms on EL'.$release.' distributions (x86_64 and aarch64 architectures)</b></p>'.
+                              '<div style="border:1px dashed #000"><p><font face=Courier>'.
+                              'sudo dnf install epel-release<br>'.
+                              'sudo dnf install --nogpgcheck https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-'.$release.'.noarch.rpm<br>'.
+                              'sudo dnf install dnf-plugins-core<br>'.
+                              'sudo dnf config-manager --set-enabled '.$repo.'<br>'.
+                              'sudo dnf install --nogpgcheck http://zmrepo.zoneminder.com/el/'.$release.'/x86_64/'.$zmrepo_rpm[$release].'<br>'.
+                              'sudo dnf install zoneminder<br>'.
+                              'less /usr/share/doc/zoneminder-*/README<br>'.
+                              '</font></p></div>';
+
+    # Now echo the instruction text as a javascript variable
+    echo "Instructions[".$release."] = '".$instructions[$release]."';".PHP_EOL;
+
+  }
 }
+
+?>
+
 </script>
 </head>
 
@@ -101,20 +109,35 @@ function SelectInstructions(select){
   <br>
   <p>The following distributions are supported:</p>
   <p>
-    <a href="el/8">EL8</a> (RHEL compatible)<br>
-    <a href="el/9">EL9</a> (RHEL compatible)<br>
-    <a href="fc/36">F36</a> (Fedora 36)<br>
-    <a href="fc/37">F37</a> (Fedora 37)<br>
+  
+  <?php
+
+  foreach ($releases as $release) {
+    if ( $release > 30 ) {
+      echo '<a href="fc/'.$release.'">F'.$release.'</a> (Fedora '.$release.')<br>'.PHP_EOL;
+    } else {
+      echo '<a href="el/'.$release.'">EL'.$release.'</a> (RHEL compatible)<br>'.PHP_EOL;
+    }
+  }
+
+  ?>
   </p>
   <br>
   <form autocomplete="off">
     Select your Distro to Display the Appropriate Installation Instructions:
     <select onChange='SelectInstructions(this);'>
       <option value="0">Choose your Distro</option>
-      <option value="1">EL8 RHEL 8 Compatible</option>
-      <option value="2">EL9 RHEL 9 Compatible</option>
-      <option value="3">F36 Fedora 36</option>
-      <option value="4">F37 Fedora 37</option>
+      <?php
+
+        foreach ($releases as $release) {
+          if ( $release > 30 ) {
+            echo '<option value="'.$release.'">F'.$release.' Fedora '.$release.'</option>'.PHP_EOL;
+          } else {
+            echo '<option value="'.$release.'">EL'.$release.' RHEL '.$release.' Compatible</option>'.PHP_EOL;
+          }
+        }
+
+      ?>
     </select>
   </form>
   <br>
