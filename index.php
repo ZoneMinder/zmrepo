@@ -197,7 +197,7 @@ The following is a list of available branches:<br><br>
 <br/>
 Then we want to import the GPG signature public key. Do:<br/>
 <br/>
-wget -O - https://zmrepo.zoneminder.com/debian/archive-keyring.gpg | sudo apt-key add -<br/>
+wget -O - https://zmrepo.zoneminder.com/debian/archive-keyring.gpg | sudo tee /etc/apt/trusted.gpg.d/zmrepo.asc<br/>
 <br/>
 Then do:<br/>
 <br/>
