@@ -26,10 +26,10 @@ $releases = array();
 
 # Define both rhel and fedora releases here, using the release number ONLY.
 # This array is all you need to change, as new releases are added and old releases are deprecated.
-$releases[] = 8;
 $releases[] = 9;
-$releases[] = 40;
+$releases[] = 10;
 $releases[] = 41;
+$releases[] = 42;
 
 $zmrepo_rpms = array();
 $zmrepo_rpm = array();
