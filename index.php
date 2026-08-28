@@ -28,8 +28,8 @@ $releases = array();
 # This array is all you need to change, as new releases are added and old releases are deprecated.
 $releases[] = 9;
 $releases[] = 10;
-$releases[] = 41;
-$releases[] = 42;
+$releases[] = 44;
+$releases[] = 45;
 
 $zmrepo_rpms = array();
 $zmrepo_rpm = array();
